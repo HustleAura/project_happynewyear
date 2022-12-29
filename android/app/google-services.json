@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "83194873199",
+    "project_id": "project-happynewyear",
+    "storage_bucket": "project-happynewyear.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83194873199:android:3ce62037e7edb26e32549a",
+        "android_client_info": {
+          "package_name": "com.example.project_happynewyear"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83194873199-f5rk6jo9fq4muj7k0q92vsm9edrcohm7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.project_happynewyear",
+            "certificate_hash": "8c970b50a2d8c92995a9ec4cefc6b3a302e3bdac"
+          }
+        },
+        {
+          "client_id": "83194873199-o5b2plsfs6e2ar6uaatrddbfc9u3udb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG4TlspipHtt3t3hMMHs5Xm6nbnSOFp6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83194873199-o5b2plsfs6e2ar6uaatrddbfc9u3udb9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
