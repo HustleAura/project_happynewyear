@@ -1,0 +1,4 @@
+features included
+- authentication
+- list of diary entries
+- diary entry object and page

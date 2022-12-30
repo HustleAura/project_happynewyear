@@ -1,0 +1,13 @@
+Sign In page
+- A lottie and text fields and sign in button.
+    - email
+    - password
+    - sign in button
+    - google sign in button
+
+Register page
+- The same lottie with different caption at the top and Register button.
+    - Name 
+    - email
+    - password
+    - 

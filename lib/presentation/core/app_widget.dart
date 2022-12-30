@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:project_happynewyear/presentation/auth/register_page.dart';
 
 import '../../application/auth/bloc/sign_in_form_bloc.dart';
 import '../../injection.dart';
-import '../sign_in/sign_in_page.dart';
+import '../auth/sign_in_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({
@@ -16,7 +17,7 @@ class AppWidget extends StatelessWidget {
       title: 'Material App',
       home: BlocProvider(
         create: (context) => getIt<SignInFormBloc>(),
-        child: const SignInPage(),
+        child: RegisterPage(),
       ),
     );
   }
