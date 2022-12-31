@@ -21,16 +21,20 @@ class TextInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FieldDecoration(
-      child: TextField(
+      child: TextFormField(
         obscureText: isPassword,
         onChanged: onChangedFunction,
+        autocorrect: false,
         cursorColor: blackColor,
         decoration: InputDecoration(
           icon: Icon(
             icon,
             color: blackColor,
           ),
-          hintText: hintText,
+          labelText: hintText,
+          labelStyle: const TextStyle(
+            color: blackColor,
+          ),
           border: InputBorder.none,
         ),
       ),

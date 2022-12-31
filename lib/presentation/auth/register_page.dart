@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:project_happynewyear/presentation/auth/widgets/signin_register_switch.dart';
 
 import '../../constants.dart';
 import 'widgets/google_sign_in_button.dart';
@@ -15,7 +16,7 @@ class RegisterPage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 80),
+          padding: const EdgeInsets.symmetric(vertical: 83),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -27,9 +28,6 @@ class RegisterPage extends StatelessWidget {
                     fontSize: 30,
                   ),
                 ),
-              ),
-              SizedBox(
-                height: fullScreenHeight * 0.05,
               ),
               Container(
                 height: fullScreenHeight * 0.225,
@@ -63,6 +61,7 @@ class RegisterPage extends StatelessWidget {
                   const GoogleSignInButton(
                     caption: 'Register with Google',
                   ),
+                  const RegisterToSignIn(),
                 ],
               ),
             ],

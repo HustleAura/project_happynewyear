@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:project_happynewyear/presentation/auth/widgets/google_sign_in_button.dart';
 import 'package:project_happynewyear/presentation/auth/widgets/rounded_button.dart';
+import 'package:project_happynewyear/presentation/auth/widgets/signin_register_switch.dart';
 
 import '../../constants.dart';
 import 'widgets/username_field.dart';
@@ -31,7 +32,7 @@ class SignInPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: fullScreenHeight * 0.1,
+                height: fullScreenHeight * 0.095,
               ),
               Container(
                 height: fullScreenHeight * 0.225,
@@ -59,6 +60,7 @@ class SignInPage extends StatelessWidget {
                   const GoogleSignInButton(
                     caption: 'Sign in with Google',
                   ),
+                  const SignInToRegister(),
                 ],
               ),
             ],

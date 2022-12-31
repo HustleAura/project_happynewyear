@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:project_happynewyear/constants.dart';
-import 'package:project_happynewyear/presentation/auth/widgets/field_decoration.dart';
+
+import 'field_decoration.dart';
 
 class GoogleSignInButton extends StatelessWidget {
   final String caption;

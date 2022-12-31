@@ -19,7 +19,7 @@ class FieldDecoration extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 10),
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
       decoration: BoxDecoration(
-        color: color ?? primaryColor,
+        color: color ?? Theme.of(context).primaryColor,
         borderRadius: BorderRadius.circular(29),
       ),
       child: child,
