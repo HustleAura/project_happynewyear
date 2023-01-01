@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 import 'package:dartz/dartz.dart';
 
@@ -10,9 +11,11 @@ import '../../domain/auth/value_objects.dart';
 @LazySingleton(as: IAuthFacade)
 class FirebaseAuthFacade implements IAuthFacade {
   final FirebaseAuth _firebaseAuth;
+  final GoogleSignIn _googleSignIn;
 
   FirebaseAuthFacade(
     this._firebaseAuth,
+    this._googleSignIn,
   );
 
   @override
@@ -68,7 +71,20 @@ class FirebaseAuthFacade implements IAuthFacade {
   @override
   Future<Either<AuthFailure, Unit>> signInWithGoogle() async {
     try {
-      await signInWithGoogle();
+      final googleUser = await _googleSignIn.signIn();
+      if (googleUser == null) {
+        return left(
+          const AuthFailure.cancelledByUser(),
+        );
+      }
+
+      final googleAuthObject = await googleUser.authentication;
+      final authCredentials = GoogleAuthProvider.credential(
+        idToken: googleAuthObject.idToken,
+        accessToken: googleAuthObject.accessToken,
+      );
+
+      _firebaseAuth.signInWithCredential(authCredentials);
       return right(unit);
     } on PlatformException {
       return left(
