@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_happynewyear/presentation/core/constants.dart';
 import 'package:project_happynewyear/presentation/auth/register_page.dart';
+import 'package:project_happynewyear/presentation/home/home_page.dart';
+import 'package:project_happynewyear/presentation/home/widgets/image_decoration.dart';
 
 import '../../application/auth/sign_in_form_bloc.dart';
 import '../../injection.dart';
@@ -27,7 +29,7 @@ class AppWidget extends StatelessWidget {
       ),
       home: BlocProvider(
         create: (context) => getIt<SignInFormBloc>(),
-        child: SignInPage(),
+        child: HomePage(),
       ),
     );
   }
