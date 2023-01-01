@@ -21,6 +21,7 @@ mixin _$SignInFormEvent {
     required TResult Function() registerPressed,
     required TResult Function() signInPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function(String nameString) nameChanged,
     required TResult Function(String emailString) emailChanged,
     required TResult Function(String passwordString) passwordChanged,
   }) =>
@@ -30,6 +31,7 @@ mixin _$SignInFormEvent {
     TResult? Function()? registerPressed,
     TResult? Function()? signInPressed,
     TResult? Function()? signInWithGooglePressed,
+    TResult? Function(String nameString)? nameChanged,
     TResult? Function(String emailString)? emailChanged,
     TResult? Function(String passwordString)? passwordChanged,
   }) =>
@@ -39,6 +41,7 @@ mixin _$SignInFormEvent {
     TResult Function()? registerPressed,
     TResult Function()? signInPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function(String nameString)? nameChanged,
     TResult Function(String emailString)? emailChanged,
     TResult Function(String passwordString)? passwordChanged,
     required TResult orElse(),
@@ -50,6 +53,7 @@ mixin _$SignInFormEvent {
     required TResult Function(SignInPressed value) signInPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(NameChanged value) nameChanged,
     required TResult Function(EmailChanged value) emailChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
   }) =>
@@ -59,6 +63,7 @@ mixin _$SignInFormEvent {
     TResult? Function(RegisterPressed value)? registerPressed,
     TResult? Function(SignInPressed value)? signInPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult? Function(NameChanged value)? nameChanged,
     TResult? Function(EmailChanged value)? emailChanged,
     TResult? Function(PasswordChanged value)? passwordChanged,
   }) =>
@@ -68,6 +73,7 @@ mixin _$SignInFormEvent {
     TResult Function(RegisterPressed value)? registerPressed,
     TResult Function(SignInPressed value)? signInPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(NameChanged value)? nameChanged,
     TResult Function(EmailChanged value)? emailChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
     required TResult orElse(),
@@ -143,6 +149,7 @@ class _$RegisterPressed
     required TResult Function() registerPressed,
     required TResult Function() signInPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function(String nameString) nameChanged,
     required TResult Function(String emailString) emailChanged,
     required TResult Function(String passwordString) passwordChanged,
   }) {
@@ -155,6 +162,7 @@ class _$RegisterPressed
     TResult? Function()? registerPressed,
     TResult? Function()? signInPressed,
     TResult? Function()? signInWithGooglePressed,
+    TResult? Function(String nameString)? nameChanged,
     TResult? Function(String emailString)? emailChanged,
     TResult? Function(String passwordString)? passwordChanged,
   }) {
@@ -167,6 +175,7 @@ class _$RegisterPressed
     TResult Function()? registerPressed,
     TResult Function()? signInPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function(String nameString)? nameChanged,
     TResult Function(String emailString)? emailChanged,
     TResult Function(String passwordString)? passwordChanged,
     required TResult orElse(),
@@ -184,6 +193,7 @@ class _$RegisterPressed
     required TResult Function(SignInPressed value) signInPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(NameChanged value) nameChanged,
     required TResult Function(EmailChanged value) emailChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
   }) {
@@ -196,6 +206,7 @@ class _$RegisterPressed
     TResult? Function(RegisterPressed value)? registerPressed,
     TResult? Function(SignInPressed value)? signInPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult? Function(NameChanged value)? nameChanged,
     TResult? Function(EmailChanged value)? emailChanged,
     TResult? Function(PasswordChanged value)? passwordChanged,
   }) {
@@ -208,6 +219,7 @@ class _$RegisterPressed
     TResult Function(RegisterPressed value)? registerPressed,
     TResult Function(SignInPressed value)? signInPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(NameChanged value)? nameChanged,
     TResult Function(EmailChanged value)? emailChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
     required TResult orElse(),
@@ -271,6 +283,7 @@ class _$SignInPressed with DiagnosticableTreeMixin implements SignInPressed {
     required TResult Function() registerPressed,
     required TResult Function() signInPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function(String nameString) nameChanged,
     required TResult Function(String emailString) emailChanged,
     required TResult Function(String passwordString) passwordChanged,
   }) {
@@ -283,6 +296,7 @@ class _$SignInPressed with DiagnosticableTreeMixin implements SignInPressed {
     TResult? Function()? registerPressed,
     TResult? Function()? signInPressed,
     TResult? Function()? signInWithGooglePressed,
+    TResult? Function(String nameString)? nameChanged,
     TResult? Function(String emailString)? emailChanged,
     TResult? Function(String passwordString)? passwordChanged,
   }) {
@@ -295,6 +309,7 @@ class _$SignInPressed with DiagnosticableTreeMixin implements SignInPressed {
     TResult Function()? registerPressed,
     TResult Function()? signInPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function(String nameString)? nameChanged,
     TResult Function(String emailString)? emailChanged,
     TResult Function(String passwordString)? passwordChanged,
     required TResult orElse(),
@@ -312,6 +327,7 @@ class _$SignInPressed with DiagnosticableTreeMixin implements SignInPressed {
     required TResult Function(SignInPressed value) signInPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(NameChanged value) nameChanged,
     required TResult Function(EmailChanged value) emailChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
   }) {
@@ -324,6 +340,7 @@ class _$SignInPressed with DiagnosticableTreeMixin implements SignInPressed {
     TResult? Function(RegisterPressed value)? registerPressed,
     TResult? Function(SignInPressed value)? signInPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult? Function(NameChanged value)? nameChanged,
     TResult? Function(EmailChanged value)? emailChanged,
     TResult? Function(PasswordChanged value)? passwordChanged,
   }) {
@@ -336,6 +353,7 @@ class _$SignInPressed with DiagnosticableTreeMixin implements SignInPressed {
     TResult Function(RegisterPressed value)? registerPressed,
     TResult Function(SignInPressed value)? signInPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(NameChanged value)? nameChanged,
     TResult Function(EmailChanged value)? emailChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
     required TResult orElse(),
@@ -402,6 +420,7 @@ class _$SignInWithGooglePressed
     required TResult Function() registerPressed,
     required TResult Function() signInPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function(String nameString) nameChanged,
     required TResult Function(String emailString) emailChanged,
     required TResult Function(String passwordString) passwordChanged,
   }) {
@@ -414,6 +433,7 @@ class _$SignInWithGooglePressed
     TResult? Function()? registerPressed,
     TResult? Function()? signInPressed,
     TResult? Function()? signInWithGooglePressed,
+    TResult? Function(String nameString)? nameChanged,
     TResult? Function(String emailString)? emailChanged,
     TResult? Function(String passwordString)? passwordChanged,
   }) {
@@ -426,6 +446,7 @@ class _$SignInWithGooglePressed
     TResult Function()? registerPressed,
     TResult Function()? signInPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function(String nameString)? nameChanged,
     TResult Function(String emailString)? emailChanged,
     TResult Function(String passwordString)? passwordChanged,
     required TResult orElse(),
@@ -443,6 +464,7 @@ class _$SignInWithGooglePressed
     required TResult Function(SignInPressed value) signInPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(NameChanged value) nameChanged,
     required TResult Function(EmailChanged value) emailChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
   }) {
@@ -455,6 +477,7 @@ class _$SignInWithGooglePressed
     TResult? Function(RegisterPressed value)? registerPressed,
     TResult? Function(SignInPressed value)? signInPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult? Function(NameChanged value)? nameChanged,
     TResult? Function(EmailChanged value)? emailChanged,
     TResult? Function(PasswordChanged value)? passwordChanged,
   }) {
@@ -467,6 +490,7 @@ class _$SignInWithGooglePressed
     TResult Function(RegisterPressed value)? registerPressed,
     TResult Function(SignInPressed value)? signInPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(NameChanged value)? nameChanged,
     TResult Function(EmailChanged value)? emailChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
     required TResult orElse(),
@@ -480,6 +504,173 @@ class _$SignInWithGooglePressed
 
 abstract class SignInWithGooglePressed implements SignInFormEvent {
   const factory SignInWithGooglePressed() = _$SignInWithGooglePressed;
+}
+
+/// @nodoc
+abstract class _$$NameChangedCopyWith<$Res> {
+  factory _$$NameChangedCopyWith(
+          _$NameChanged value, $Res Function(_$NameChanged) then) =
+      __$$NameChangedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String nameString});
+}
+
+/// @nodoc
+class __$$NameChangedCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res, _$NameChanged>
+    implements _$$NameChangedCopyWith<$Res> {
+  __$$NameChangedCopyWithImpl(
+      _$NameChanged _value, $Res Function(_$NameChanged) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? nameString = null,
+  }) {
+    return _then(_$NameChanged(
+      null == nameString
+          ? _value.nameString
+          : nameString // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
+  const _$NameChanged(this.nameString);
+
+  @override
+  final String nameString;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SignInFormEvent.nameChanged(nameString: $nameString)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SignInFormEvent.nameChanged'))
+      ..add(DiagnosticsProperty('nameString', nameString));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NameChanged &&
+            (identical(other.nameString, nameString) ||
+                other.nameString == nameString));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, nameString);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NameChangedCopyWith<_$NameChanged> get copyWith =>
+      __$$NameChangedCopyWithImpl<_$NameChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() registerPressed,
+    required TResult Function() signInPressed,
+    required TResult Function() signInWithGooglePressed,
+    required TResult Function(String nameString) nameChanged,
+    required TResult Function(String emailString) emailChanged,
+    required TResult Function(String passwordString) passwordChanged,
+  }) {
+    return nameChanged(nameString);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? registerPressed,
+    TResult? Function()? signInPressed,
+    TResult? Function()? signInWithGooglePressed,
+    TResult? Function(String nameString)? nameChanged,
+    TResult? Function(String emailString)? emailChanged,
+    TResult? Function(String passwordString)? passwordChanged,
+  }) {
+    return nameChanged?.call(nameString);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? registerPressed,
+    TResult Function()? signInPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function(String nameString)? nameChanged,
+    TResult Function(String emailString)? emailChanged,
+    TResult Function(String passwordString)? passwordChanged,
+    required TResult orElse(),
+  }) {
+    if (nameChanged != null) {
+      return nameChanged(nameString);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterPressed value) registerPressed,
+    required TResult Function(SignInPressed value) signInPressed,
+    required TResult Function(SignInWithGooglePressed value)
+        signInWithGooglePressed,
+    required TResult Function(NameChanged value) nameChanged,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+  }) {
+    return nameChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(RegisterPressed value)? registerPressed,
+    TResult? Function(SignInPressed value)? signInPressed,
+    TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult? Function(NameChanged value)? nameChanged,
+    TResult? Function(EmailChanged value)? emailChanged,
+    TResult? Function(PasswordChanged value)? passwordChanged,
+  }) {
+    return nameChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterPressed value)? registerPressed,
+    TResult Function(SignInPressed value)? signInPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(NameChanged value)? nameChanged,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    required TResult orElse(),
+  }) {
+    if (nameChanged != null) {
+      return nameChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NameChanged implements SignInFormEvent {
+  const factory NameChanged(final String nameString) = _$NameChanged;
+
+  String get nameString;
+  @JsonKey(ignore: true)
+  _$$NameChangedCopyWith<_$NameChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -558,6 +749,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     required TResult Function() registerPressed,
     required TResult Function() signInPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function(String nameString) nameChanged,
     required TResult Function(String emailString) emailChanged,
     required TResult Function(String passwordString) passwordChanged,
   }) {
@@ -570,6 +762,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     TResult? Function()? registerPressed,
     TResult? Function()? signInPressed,
     TResult? Function()? signInWithGooglePressed,
+    TResult? Function(String nameString)? nameChanged,
     TResult? Function(String emailString)? emailChanged,
     TResult? Function(String passwordString)? passwordChanged,
   }) {
@@ -582,6 +775,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     TResult Function()? registerPressed,
     TResult Function()? signInPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function(String nameString)? nameChanged,
     TResult Function(String emailString)? emailChanged,
     TResult Function(String passwordString)? passwordChanged,
     required TResult orElse(),
@@ -599,6 +793,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     required TResult Function(SignInPressed value) signInPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(NameChanged value) nameChanged,
     required TResult Function(EmailChanged value) emailChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
   }) {
@@ -611,6 +806,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     TResult? Function(RegisterPressed value)? registerPressed,
     TResult? Function(SignInPressed value)? signInPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult? Function(NameChanged value)? nameChanged,
     TResult? Function(EmailChanged value)? emailChanged,
     TResult? Function(PasswordChanged value)? passwordChanged,
   }) {
@@ -623,6 +819,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
     TResult Function(RegisterPressed value)? registerPressed,
     TResult Function(SignInPressed value)? signInPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(NameChanged value)? nameChanged,
     TResult Function(EmailChanged value)? emailChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
     required TResult orElse(),
@@ -721,6 +918,7 @@ class _$PasswordChanged
     required TResult Function() registerPressed,
     required TResult Function() signInPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function(String nameString) nameChanged,
     required TResult Function(String emailString) emailChanged,
     required TResult Function(String passwordString) passwordChanged,
   }) {
@@ -733,6 +931,7 @@ class _$PasswordChanged
     TResult? Function()? registerPressed,
     TResult? Function()? signInPressed,
     TResult? Function()? signInWithGooglePressed,
+    TResult? Function(String nameString)? nameChanged,
     TResult? Function(String emailString)? emailChanged,
     TResult? Function(String passwordString)? passwordChanged,
   }) {
@@ -745,6 +944,7 @@ class _$PasswordChanged
     TResult Function()? registerPressed,
     TResult Function()? signInPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function(String nameString)? nameChanged,
     TResult Function(String emailString)? emailChanged,
     TResult Function(String passwordString)? passwordChanged,
     required TResult orElse(),
@@ -762,6 +962,7 @@ class _$PasswordChanged
     required TResult Function(SignInPressed value) signInPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(NameChanged value) nameChanged,
     required TResult Function(EmailChanged value) emailChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
   }) {
@@ -774,6 +975,7 @@ class _$PasswordChanged
     TResult? Function(RegisterPressed value)? registerPressed,
     TResult? Function(SignInPressed value)? signInPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult? Function(NameChanged value)? nameChanged,
     TResult? Function(EmailChanged value)? emailChanged,
     TResult? Function(PasswordChanged value)? passwordChanged,
   }) {
@@ -786,6 +988,7 @@ class _$PasswordChanged
     TResult Function(RegisterPressed value)? registerPressed,
     TResult Function(SignInPressed value)? signInPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(NameChanged value)? nameChanged,
     TResult Function(EmailChanged value)? emailChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
     required TResult orElse(),
@@ -809,10 +1012,11 @@ abstract class PasswordChanged implements SignInFormEvent {
 
 /// @nodoc
 mixin _$SignInFormState {
+  Name get name => throw _privateConstructorUsedError;
   EmailAddress get emailAddress => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
   bool get isSubmitting => throw _privateConstructorUsedError;
-  bool get showErrorMessages => throw _privateConstructorUsedError;
+  AutovalidateMode get showErrorMessages => throw _privateConstructorUsedError;
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
@@ -828,10 +1032,11 @@ abstract class $SignInFormStateCopyWith<$Res> {
       _$SignInFormStateCopyWithImpl<$Res, SignInFormState>;
   @useResult
   $Res call(
-      {EmailAddress emailAddress,
+      {Name name,
+      EmailAddress emailAddress,
       Password password,
       bool isSubmitting,
-      bool showErrorMessages,
+      AutovalidateMode showErrorMessages,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
 }
 
@@ -848,6 +1053,7 @@ class _$SignInFormStateCopyWithImpl<$Res, $Val extends SignInFormState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? name = null,
     Object? emailAddress = null,
     Object? password = null,
     Object? isSubmitting = null,
@@ -855,6 +1061,10 @@ class _$SignInFormStateCopyWithImpl<$Res, $Val extends SignInFormState>
     Object? authFailureOrSuccessOption = null,
   }) {
     return _then(_value.copyWith(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Name,
       emailAddress: null == emailAddress
           ? _value.emailAddress
           : emailAddress // ignore: cast_nullable_to_non_nullable
@@ -870,7 +1080,7 @@ class _$SignInFormStateCopyWithImpl<$Res, $Val extends SignInFormState>
       showErrorMessages: null == showErrorMessages
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as AutovalidateMode,
       authFailureOrSuccessOption: null == authFailureOrSuccessOption
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -888,10 +1098,11 @@ abstract class _$$_SignInFormStateCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {EmailAddress emailAddress,
+      {Name name,
+      EmailAddress emailAddress,
       Password password,
       bool isSubmitting,
-      bool showErrorMessages,
+      AutovalidateMode showErrorMessages,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
 }
 
@@ -906,6 +1117,7 @@ class __$$_SignInFormStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? name = null,
     Object? emailAddress = null,
     Object? password = null,
     Object? isSubmitting = null,
@@ -913,6 +1125,10 @@ class __$$_SignInFormStateCopyWithImpl<$Res>
     Object? authFailureOrSuccessOption = null,
   }) {
     return _then(_$_SignInFormState(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Name,
       emailAddress: null == emailAddress
           ? _value.emailAddress
           : emailAddress // ignore: cast_nullable_to_non_nullable
@@ -928,7 +1144,7 @@ class __$$_SignInFormStateCopyWithImpl<$Res>
       showErrorMessages: null == showErrorMessages
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as AutovalidateMode,
       authFailureOrSuccessOption: null == authFailureOrSuccessOption
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -943,12 +1159,15 @@ class _$_SignInFormState
     with DiagnosticableTreeMixin
     implements _SignInFormState {
   const _$_SignInFormState(
-      {required this.emailAddress,
+      {required this.name,
+      required this.emailAddress,
       required this.password,
       required this.isSubmitting,
       required this.showErrorMessages,
       required this.authFailureOrSuccessOption});
 
+  @override
+  final Name name;
   @override
   final EmailAddress emailAddress;
   @override
@@ -956,13 +1175,13 @@ class _$_SignInFormState
   @override
   final bool isSubmitting;
   @override
-  final bool showErrorMessages;
+  final AutovalidateMode showErrorMessages;
   @override
   final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInFormState(emailAddress: $emailAddress, password: $password, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'SignInFormState(name: $name, emailAddress: $emailAddress, password: $password, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
   }
 
   @override
@@ -970,6 +1189,7 @@ class _$_SignInFormState
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'SignInFormState'))
+      ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('emailAddress', emailAddress))
       ..add(DiagnosticsProperty('password', password))
       ..add(DiagnosticsProperty('isSubmitting', isSubmitting))
@@ -983,6 +1203,7 @@ class _$_SignInFormState
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SignInFormState &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.emailAddress, emailAddress) ||
                 other.emailAddress == emailAddress) &&
             (identical(other.password, password) ||
@@ -998,7 +1219,7 @@ class _$_SignInFormState
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, emailAddress, password,
+  int get hashCode => Object.hash(runtimeType, name, emailAddress, password,
       isSubmitting, showErrorMessages, authFailureOrSuccessOption);
 
   @JsonKey(ignore: true)
@@ -1010,13 +1231,16 @@ class _$_SignInFormState
 
 abstract class _SignInFormState implements SignInFormState {
   const factory _SignInFormState(
-      {required final EmailAddress emailAddress,
+      {required final Name name,
+      required final EmailAddress emailAddress,
       required final Password password,
       required final bool isSubmitting,
-      required final bool showErrorMessages,
+      required final AutovalidateMode showErrorMessages,
       required final Option<Either<AuthFailure, Unit>>
           authFailureOrSuccessOption}) = _$_SignInFormState;
 
+  @override
+  Name get name;
   @override
   EmailAddress get emailAddress;
   @override
@@ -1024,7 +1248,7 @@ abstract class _SignInFormState implements SignInFormState {
   @override
   bool get isSubmitting;
   @override
-  bool get showErrorMessages;
+  AutovalidateMode get showErrorMessages;
   @override
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
   @override

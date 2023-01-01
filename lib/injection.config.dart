@@ -9,7 +9,7 @@ import 'package:cloud_firestore/cloud_firestore.dart' as _i4;
 import 'package:firebase_auth/firebase_auth.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
-import 'package:project_happynewyear/application/auth/bloc/sign_in_form_bloc.dart'
+import 'package:project_happynewyear/application/auth/sign_in_form_bloc.dart'
     as _i7;
 import 'package:project_happynewyear/domain/auth/i_auth_facade.dart' as _i5;
 import 'package:project_happynewyear/infrastructure/auth/firebase_auth_facade.dart'

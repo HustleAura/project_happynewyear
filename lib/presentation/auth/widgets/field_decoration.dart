@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+import '../../core/constants.dart';
 
 class FieldDecoration extends StatelessWidget {
   final Widget child;

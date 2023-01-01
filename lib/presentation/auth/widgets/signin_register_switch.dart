@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_happynewyear/constants.dart';
+import 'package:project_happynewyear/presentation/core/constants.dart';
 import 'package:project_happynewyear/presentation/auth/register_page.dart';
 import 'package:project_happynewyear/presentation/auth/sign_in_page.dart';
 

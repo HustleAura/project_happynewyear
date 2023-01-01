@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../constants.dart';
+import '../../core/constants.dart';
 import 'field_decoration.dart';
 
 // rounded button for displaying logout button and get premium UI

@@ -2,7 +2,20 @@
 import 'package:dartz/dartz.dart';
 import '../core/failures.dart';
 import '../core/value_objects.dart';
-import '../core/value_validators.dart';
+import 'value_validators.dart';
+
+class Name extends ValueObjects<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory Name(String input) {
+    return Name._(
+      validatedName(input),
+    );
+  }
+
+  Name._(this.value);
+}
 
 class EmailAddress extends ValueObjects<String> {
   @override

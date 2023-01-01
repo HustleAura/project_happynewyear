@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:project_happynewyear/constants.dart';
+import 'package:project_happynewyear/presentation/core/constants.dart';
 import 'package:project_happynewyear/presentation/auth/register_page.dart';
 
-import '../../application/auth/bloc/sign_in_form_bloc.dart';
+import '../../application/auth/sign_in_form_bloc.dart';
 import '../../injection.dart';
 import '../auth/sign_in_page.dart';
 

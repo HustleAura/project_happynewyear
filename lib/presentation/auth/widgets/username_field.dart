@@ -1,4 +1,4 @@
-import '../../../constants.dart';
+import '../../core/constants.dart';
 import 'package:flutter/material.dart';
 
 import 'field_decoration.dart';
@@ -9,6 +9,7 @@ class TextInputField extends StatelessWidget {
   final String hintText;
   final IconData icon;
   final void Function(String)? onChangedFunction;
+  final String? Function(String?)? validatorFunction;
 
   const TextInputField({
     super.key,
@@ -16,6 +17,7 @@ class TextInputField extends StatelessWidget {
     required this.icon,
     required this.onChangedFunction,
     required this.isPassword,
+    this.validatorFunction,
   });
 
   @override
@@ -24,6 +26,7 @@ class TextInputField extends StatelessWidget {
       child: TextFormField(
         obscureText: isPassword,
         onChanged: onChangedFunction,
+        validator: validatorFunction,
         autocorrect: false,
         cursorColor: blackColor,
         decoration: InputDecoration(
@@ -31,10 +34,7 @@ class TextInputField extends StatelessWidget {
             icon,
             color: blackColor,
           ),
-          labelText: hintText,
-          labelStyle: const TextStyle(
-            color: blackColor,
-          ),
+          hintText: hintText,
           border: InputBorder.none,
         ),
       ),

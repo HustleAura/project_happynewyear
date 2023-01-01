@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
-import 'package:project_happynewyear/presentation/auth/widgets/signin_register_switch.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../constants.dart';
-import 'widgets/google_sign_in_button.dart';
-import 'widgets/rounded_button.dart';
-import 'widgets/username_field.dart';
+import '../../application/auth/sign_in_form_bloc.dart';
+import '../../injection.dart';
+import 'widgets/register_form.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -14,58 +11,11 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 83),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Hello, nice to meet you!',
-                style: GoogleFonts.kanit(
-                  textStyle: const TextStyle(
-                    fontSize: 30,
-                  ),
-                ),
-              ),
-              Container(
-                height: fullScreenHeight * 0.225,
-                child: LottieBuilder.asset(authLottie),
-              ),
-              Column(
-                children: [
-                  TextInputField(
-                    hintText: 'Name',
-                    icon: Icons.person,
-                    isPassword: false,
-                    onChangedFunction: (name) {},
-                  ),
-                  TextInputField(
-                    hintText: 'Email Address',
-                    icon: Icons.email,
-                    isPassword: false,
-                    onChangedFunction: (email) {},
-                  ),
-                  TextInputField(
-                    hintText: 'Password',
-                    icon: Icons.key,
-                    isPassword: true,
-                    onChangedFunction: (password) {},
-                  ),
-                  RoundedButton(
-                    text: 'REGISTER',
-                    onPressedFunction: () {},
-                    backgroundColor: darkPrimaryColor,
-                  ),
-                  const GoogleSignInButton(
-                    caption: 'Register with Google',
-                  ),
-                  const RegisterToSignIn(),
-                ],
-              ),
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 83),
+        child: BlocProvider(
+          create: (context) => getIt<SignInFormBloc>(),
+          child: RegisterForm(),
         ),
       ),
     );

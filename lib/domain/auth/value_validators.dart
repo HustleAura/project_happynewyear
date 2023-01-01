@@ -1,6 +1,10 @@
 import 'package:dartz/dartz.dart';
 
-import 'failures.dart';
+import '../core/failures.dart';
+
+Either<ValueFailure<String>, String> validatedName(String input) {
+  return right(input);
+}
 
 Either<ValueFailure<String>, String> validatedEmailAddress(String input) {
   const emailRegex =
