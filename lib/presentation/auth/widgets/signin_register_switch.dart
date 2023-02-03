@@ -18,11 +18,11 @@ class SignInToRegister extends StatelessWidget {
           ),
         );
       },
-      child: Text(
+      child: const Text(
         'Don\'t have an account? Register now',
         style: TextStyle(
           fontWeight: FontWeight.bold,
-          color: darkPrimaryColor,
+          color: darkPrimaryColor2,
         ),
       ),
     );

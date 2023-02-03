@@ -12,11 +12,11 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: const [
           Expanded(
-            flex: 2,
+            flex: 3,
             child: ImageDecoration(),
           ),
           Expanded(
-            flex: 3,
+            flex: 4,
             child: HomePageWidget(),
           ),
         ],

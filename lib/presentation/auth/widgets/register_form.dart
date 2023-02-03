@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../application/auth/sign_in_form_bloc.dart';
+import '../../../application/auth/sign_in_page_bloc/sign_in_form_bloc.dart';
 import '../../core/constants.dart';
 import 'google_sign_in_button.dart';
 import 'rounded_button.dart';
@@ -37,7 +37,7 @@ class RegisterForm extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
+                SizedBox(
                   height: fullScreenHeight * 0.225,
                   child: LottieBuilder.asset(authLottie),
                 ),

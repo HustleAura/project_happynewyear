@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:project_happynewyear/application/auth/sign_in_form_bloc.dart';
-import 'package:project_happynewyear/presentation/core/constants.dart';
 
+import '../../../application/auth/sign_in_page_bloc/sign_in_form_bloc.dart';
+import '../../core/constants.dart';
 import 'field_decoration.dart';
 
 class GoogleAuthButton extends StatelessWidget {
@@ -28,9 +28,9 @@ class GoogleAuthButton extends StatelessWidget {
                     const SignInFormEvent.signInWithGooglePressed(),
                   );
             },
-            icon: Icon(
+            icon: const Icon(
               MdiIcons.google,
-              color: darkPrimaryColor,
+              color: darkPrimaryColor2,
             ),
             label: const Text(
               'Register / Sign in with Google',

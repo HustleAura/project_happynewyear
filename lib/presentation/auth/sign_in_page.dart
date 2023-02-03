@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_happynewyear/injection.dart';
-import '../../application/auth/sign_in_form_bloc.dart';
+import '../../application/auth/sign_in_page_bloc/sign_in_form_bloc.dart';
 import 'widgets/sign_in_form.dart';
 
 TextEditingController controller = TextEditingController();

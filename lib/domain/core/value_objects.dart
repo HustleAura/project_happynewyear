@@ -2,6 +2,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:uuid/uuid.dart';
 
 import 'errors.dart';
 import 'failures.dart';
@@ -21,4 +22,29 @@ abstract class ValueObjects<T> extends Equatable {
 
   @override
   List<Object?> get props => [value];
+}
+
+class UniqueId extends ValueObjects<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory UniqueId() {
+    return UniqueId._(
+      right(const Uuid().v1()),
+    );
+  }
+
+  factory UniqueId.fromUniqueString(String uniqueId) {
+    return UniqueId._(
+      right(uniqueId),
+    );
+  }
+
+  factory UniqueId.forNullUser() {
+    return UniqueId._(
+      right(''),
+    );
+  }
+
+  UniqueId._(this.value);
 }

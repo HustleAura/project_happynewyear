@@ -2,7 +2,7 @@
 import 'package:dartz/dartz.dart';
 import '../core/failures.dart';
 import '../core/value_objects.dart';
-import 'value_validators.dart';
+import '../core/value_validators.dart';
 
 class Name extends ValueObjects<String> {
   @override

@@ -36,7 +36,7 @@ class DiaryEntryTile extends StatelessWidget {
           ),
           Text(
             '\'The Title Goes Here\'',
-            style: GoogleFonts.architectsDaughter(
+            style: GoogleFonts.kalam(
               fontSize: 20,
             ),
           ),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:project_happynewyear/application/auth/sign_in_form_bloc.dart';
 
+import '../../../application/auth/sign_in_page_bloc/sign_in_form_bloc.dart';
 import '../../core/constants.dart';
 import 'google_sign_in_button.dart';
 import 'rounded_button.dart';
@@ -40,7 +40,7 @@ class SignInForm extends StatelessWidget {
                 SizedBox(
                   height: fullScreenHeight * 0.095,
                 ),
-                Container(
+                SizedBox(
                   height: fullScreenHeight * 0.225,
                   child: LottieBuilder.asset(authLottie),
                 ),
@@ -102,7 +102,7 @@ class SignInForm extends StatelessWidget {
                               const SignInFormEvent.signInPressed(),
                             );
                       },
-                      backgroundColor: darkPrimaryColor,
+                      backgroundColor: darkPrimaryColor2,
                     ),
                     const GoogleAuthButton(),
                     const SignInToRegister(),

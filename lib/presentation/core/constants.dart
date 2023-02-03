@@ -15,6 +15,7 @@ const Color backgroundColor = Color(0xFFFFF3E0);
 const Color blackColor = Colors.black;
 const Color tileColor = Color.fromRGBO(233, 189, 165, 0.6);
 const Color darkPrimaryColor = Color.fromARGB(255, 174, 114, 84);
+const Color fontColor = Color.fromARGB(205, 117, 117, 117);
 
 // custom material colors
 Map<int, Color> swatchMap = const {

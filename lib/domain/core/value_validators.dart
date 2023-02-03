@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 
-import '../core/failures.dart';
+import 'failures.dart';
 
 Either<ValueFailure<String>, String> validatedName(String input) {
   return right(input);
