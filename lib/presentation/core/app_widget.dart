@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:project_happynewyear/application/auth/auth_ui_bloc/auth_ui_bloc.dart';
 import 'package:project_happynewyear/presentation/core/constants.dart';
 
-import '../../application/auth/sign_in_page_bloc/sign_in_form_bloc.dart';
 import '../../injection.dart';
-import '../auth/sign_in_page.dart';
 import '../home/home_page.dart';
 
 class AppWidget extends StatelessWidget {
@@ -26,7 +25,7 @@ class AppWidget extends StatelessWidget {
         ),
       ),
       home: BlocProvider(
-        create: (context) => getIt<SignInFormBloc>(),
+        create: (context) => getIt<AuthUIBloc>(),
         child: const HomePage(),
       ),
     );

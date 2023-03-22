@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-import '../../../application/auth/sign_in_page_bloc/sign_in_form_bloc.dart';
+import '../../../application/auth/auth_ui_bloc/auth_ui_bloc.dart';
 import '../../core/constants.dart';
 import 'field_decoration.dart';
 
@@ -24,8 +24,8 @@ class GoogleAuthButton extends StatelessWidget {
           color: Colors.grey.shade300,
           child: TextButton.icon(
             onPressed: () {
-              context.read<SignInFormBloc>().add(
-                    const SignInFormEvent.signInWithGooglePressed(),
+              context.read<AuthUIBloc>().add(
+                    const AuthUIEvent.signInWithGooglePressed(),
                   );
             },
             icon: const Icon(
