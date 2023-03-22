@@ -11,7 +11,7 @@ import '../../../domain/auth/value_objects.dart';
 
 part 'auth_ui_event.dart';
 part 'auth_ui_state.dart';
-part 'sign_in_form_bloc.freezed.dart';
+part 'auth_ui_bloc.freezed.dart';
 
 @injectable
 class AuthUIBloc extends Bloc<AuthUIEvent, AuthUIState> {

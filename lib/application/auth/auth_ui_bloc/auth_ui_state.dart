@@ -1,7 +1,7 @@
 part of 'auth_ui_bloc.dart';
 
 @freezed
-class AuthUIState with _$SignInFormState {
+class AuthUIState with _$AuthUIState {
   const factory AuthUIState({
     required Name name,
     required EmailAddress emailAddress,

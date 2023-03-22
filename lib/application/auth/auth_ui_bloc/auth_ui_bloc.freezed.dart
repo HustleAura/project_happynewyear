@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$SignInFormEvent {
+mixin _$AuthUIEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() registerPressed,
@@ -82,16 +82,16 @@ mixin _$SignInFormEvent {
 }
 
 /// @nodoc
-abstract class $SignInFormEventCopyWith<$Res> {
-  factory $SignInFormEventCopyWith(
+abstract class $AuthUIEventCopyWith<$Res> {
+  factory $AuthUIEventCopyWith(
           AuthUIEvent value, $Res Function(AuthUIEvent) then) =
-      _$SignInFormEventCopyWithImpl<$Res, AuthUIEvent>;
+      _$AuthUIEventCopyWithImpl<$Res, AuthUIEvent>;
 }
 
 /// @nodoc
-class _$SignInFormEventCopyWithImpl<$Res, $Val extends AuthUIEvent>
-    implements $SignInFormEventCopyWith<$Res> {
-  _$SignInFormEventCopyWithImpl(this._value, this._then);
+class _$AuthUIEventCopyWithImpl<$Res, $Val extends AuthUIEvent>
+    implements $AuthUIEventCopyWith<$Res> {
+  _$AuthUIEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -108,7 +108,7 @@ abstract class _$$RegisterPressedCopyWith<$Res> {
 
 /// @nodoc
 class __$$RegisterPressedCopyWithImpl<$Res>
-    extends _$SignInFormEventCopyWithImpl<$Res, _$RegisterPressed>
+    extends _$AuthUIEventCopyWithImpl<$Res, _$RegisterPressed>
     implements _$$RegisterPressedCopyWith<$Res> {
   __$$RegisterPressedCopyWithImpl(
       _$RegisterPressed _value, $Res Function(_$RegisterPressed) _then)
@@ -124,14 +124,13 @@ class _$RegisterPressed
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInFormEvent.registerPressed()';
+    return 'AuthUIEvent.registerPressed()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'SignInFormEvent.registerPressed'));
+    properties.add(DiagnosticsProperty('type', 'AuthUIEvent.registerPressed'));
   }
 
   @override
@@ -244,7 +243,7 @@ abstract class _$$SignInPressedCopyWith<$Res> {
 
 /// @nodoc
 class __$$SignInPressedCopyWithImpl<$Res>
-    extends _$SignInFormEventCopyWithImpl<$Res, _$SignInPressed>
+    extends _$AuthUIEventCopyWithImpl<$Res, _$SignInPressed>
     implements _$$SignInPressedCopyWith<$Res> {
   __$$SignInPressedCopyWithImpl(
       _$SignInPressed _value, $Res Function(_$SignInPressed) _then)
@@ -258,14 +257,13 @@ class _$SignInPressed with DiagnosticableTreeMixin implements SignInPressed {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInFormEvent.signInPressed()';
+    return 'AuthUIEvent.signInPressed()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'SignInFormEvent.signInPressed'));
+    properties.add(DiagnosticsProperty('type', 'AuthUIEvent.signInPressed'));
   }
 
   @override
@@ -378,7 +376,7 @@ abstract class _$$SignInWithGooglePressedCopyWith<$Res> {
 
 /// @nodoc
 class __$$SignInWithGooglePressedCopyWithImpl<$Res>
-    extends _$SignInFormEventCopyWithImpl<$Res, _$SignInWithGooglePressed>
+    extends _$AuthUIEventCopyWithImpl<$Res, _$SignInWithGooglePressed>
     implements _$$SignInWithGooglePressedCopyWith<$Res> {
   __$$SignInWithGooglePressedCopyWithImpl(_$SignInWithGooglePressed _value,
       $Res Function(_$SignInWithGooglePressed) _then)
@@ -394,14 +392,14 @@ class _$SignInWithGooglePressed
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInFormEvent.signInWithGooglePressed()';
+    return 'AuthUIEvent.signInWithGooglePressed()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties.add(
-        DiagnosticsProperty('type', 'SignInFormEvent.signInWithGooglePressed'));
+        DiagnosticsProperty('type', 'AuthUIEvent.signInWithGooglePressed'));
   }
 
   @override
@@ -517,7 +515,7 @@ abstract class _$$NameChangedCopyWith<$Res> {
 
 /// @nodoc
 class __$$NameChangedCopyWithImpl<$Res>
-    extends _$SignInFormEventCopyWithImpl<$Res, _$NameChanged>
+    extends _$AuthUIEventCopyWithImpl<$Res, _$NameChanged>
     implements _$$NameChangedCopyWith<$Res> {
   __$$NameChangedCopyWithImpl(
       _$NameChanged _value, $Res Function(_$NameChanged) _then)
@@ -547,14 +545,14 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInFormEvent.nameChanged(nameString: $nameString)';
+    return 'AuthUIEvent.nameChanged(nameString: $nameString)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'SignInFormEvent.nameChanged'))
+      ..add(DiagnosticsProperty('type', 'AuthUIEvent.nameChanged'))
       ..add(DiagnosticsProperty('nameString', nameString));
   }
 
@@ -684,7 +682,7 @@ abstract class _$$EmailChangedCopyWith<$Res> {
 
 /// @nodoc
 class __$$EmailChangedCopyWithImpl<$Res>
-    extends _$SignInFormEventCopyWithImpl<$Res, _$EmailChanged>
+    extends _$AuthUIEventCopyWithImpl<$Res, _$EmailChanged>
     implements _$$EmailChangedCopyWith<$Res> {
   __$$EmailChangedCopyWithImpl(
       _$EmailChanged _value, $Res Function(_$EmailChanged) _then)
@@ -714,14 +712,14 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInFormEvent.emailChanged(emailString: $emailString)';
+    return 'AuthUIEvent.emailChanged(emailString: $emailString)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'SignInFormEvent.emailChanged'))
+      ..add(DiagnosticsProperty('type', 'AuthUIEvent.emailChanged'))
       ..add(DiagnosticsProperty('emailString', emailString));
   }
 
@@ -851,7 +849,7 @@ abstract class _$$PasswordChangedCopyWith<$Res> {
 
 /// @nodoc
 class __$$PasswordChangedCopyWithImpl<$Res>
-    extends _$SignInFormEventCopyWithImpl<$Res, _$PasswordChanged>
+    extends _$AuthUIEventCopyWithImpl<$Res, _$PasswordChanged>
     implements _$$PasswordChangedCopyWith<$Res> {
   __$$PasswordChangedCopyWithImpl(
       _$PasswordChanged _value, $Res Function(_$PasswordChanged) _then)
@@ -883,14 +881,14 @@ class _$PasswordChanged
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInFormEvent.passwordChanged(passwordString: $passwordString)';
+    return 'AuthUIEvent.passwordChanged(passwordString: $passwordString)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'SignInFormEvent.passwordChanged'))
+      ..add(DiagnosticsProperty('type', 'AuthUIEvent.passwordChanged'))
       ..add(DiagnosticsProperty('passwordString', passwordString));
   }
 
@@ -1011,7 +1009,7 @@ abstract class PasswordChanged implements AuthUIEvent {
 }
 
 /// @nodoc
-mixin _$SignInFormState {
+mixin _$AuthUIState {
   Name get name => throw _privateConstructorUsedError;
   EmailAddress get emailAddress => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
@@ -1021,15 +1019,15 @@ mixin _$SignInFormState {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $SignInFormStateCopyWith<AuthUIState> get copyWith =>
+  $AuthUIStateCopyWith<AuthUIState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SignInFormStateCopyWith<$Res> {
-  factory $SignInFormStateCopyWith(
+abstract class $AuthUIStateCopyWith<$Res> {
+  factory $AuthUIStateCopyWith(
           AuthUIState value, $Res Function(AuthUIState) then) =
-      _$SignInFormStateCopyWithImpl<$Res, AuthUIState>;
+      _$AuthUIStateCopyWithImpl<$Res, AuthUIState>;
   @useResult
   $Res call(
       {Name name,
@@ -1041,9 +1039,9 @@ abstract class $SignInFormStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SignInFormStateCopyWithImpl<$Res, $Val extends AuthUIState>
-    implements $SignInFormStateCopyWith<$Res> {
-  _$SignInFormStateCopyWithImpl(this._value, this._then);
+class _$AuthUIStateCopyWithImpl<$Res, $Val extends AuthUIState>
+    implements $AuthUIStateCopyWith<$Res> {
+  _$AuthUIStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1091,7 +1089,7 @@ class _$SignInFormStateCopyWithImpl<$Res, $Val extends AuthUIState>
 
 /// @nodoc
 abstract class _$$_SignInFormStateCopyWith<$Res>
-    implements $SignInFormStateCopyWith<$Res> {
+    implements $AuthUIStateCopyWith<$Res> {
   factory _$$_SignInFormStateCopyWith(
           _$_SignInFormState value, $Res Function(_$_SignInFormState) then) =
       __$$_SignInFormStateCopyWithImpl<$Res>;
@@ -1108,7 +1106,7 @@ abstract class _$$_SignInFormStateCopyWith<$Res>
 
 /// @nodoc
 class __$$_SignInFormStateCopyWithImpl<$Res>
-    extends _$SignInFormStateCopyWithImpl<$Res, _$_SignInFormState>
+    extends _$AuthUIStateCopyWithImpl<$Res, _$_SignInFormState>
     implements _$$_SignInFormStateCopyWith<$Res> {
   __$$_SignInFormStateCopyWithImpl(
       _$_SignInFormState _value, $Res Function(_$_SignInFormState) _then)
@@ -1181,14 +1179,14 @@ class _$_SignInFormState
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInFormState(name: $name, emailAddress: $emailAddress, password: $password, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'AuthUIState(name: $name, emailAddress: $emailAddress, password: $password, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'SignInFormState'))
+      ..add(DiagnosticsProperty('type', 'AuthUIState'))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('emailAddress', emailAddress))
       ..add(DiagnosticsProperty('password', password))

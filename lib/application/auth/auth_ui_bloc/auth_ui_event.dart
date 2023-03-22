@@ -1,7 +1,7 @@
 part of 'auth_ui_bloc.dart';
 
 @freezed
-class AuthUIEvent with _$SignInFormEvent {
+class AuthUIEvent with _$AuthUIEvent {
   const factory AuthUIEvent.registerPressed() = RegisterPressed;
   const factory AuthUIEvent.signInPressed() = SignInPressed;
   const factory AuthUIEvent.signInWithGooglePressed() = SignInWithGooglePressed;
