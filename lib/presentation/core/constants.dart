@@ -40,3 +40,8 @@ final fullScreenSize =
     MediaQueryData.fromWindow(WidgetsBinding.instance.window).size;
 final fullScreenWidth = fullScreenSize.width;
 final fullScreenHeight = fullScreenSize.height;
+
+// named routes
+const routeHomePage = '/homepage';
+const routeAuthPage = '/authpage';
+const routeNewEntryPage = '/newentrypage';

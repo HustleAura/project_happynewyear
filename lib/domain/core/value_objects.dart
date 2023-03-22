@@ -40,11 +40,5 @@ class UniqueId extends ValueObjects<String> {
     );
   }
 
-  factory UniqueId.forNullUser() {
-    return UniqueId._(
-      right(''),
-    );
-  }
-
   UniqueId._(this.value);
 }

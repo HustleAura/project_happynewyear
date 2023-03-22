@@ -9,16 +9,16 @@ import '../../../domain/auth/auth_failure.dart';
 import '../../../domain/auth/i_auth_facade.dart';
 import '../../../domain/auth/value_objects.dart';
 
-part 'sign_in_form_event.dart';
-part 'sign_in_form_state.dart';
+part 'auth_ui_event.dart';
+part 'auth_ui_state.dart';
 part 'sign_in_form_bloc.freezed.dart';
 
 @injectable
-class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
+class AuthUIBloc extends Bloc<AuthUIEvent, AuthUIState> {
   final IAuthFacade _authFacade;
 
-  SignInFormBloc(this._authFacade) : super(SignInFormState.initial()) {
-    on<SignInFormEvent>((event, emit) {
+  AuthUIBloc(this._authFacade) : super(AuthUIState.initial()) {
+    on<AuthUIEvent>((event, emit) {
       event.map(
         registerPressed: (e) async {
           bool isEmailValid = state.emailAddress.isValid;

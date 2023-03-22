@@ -11,9 +11,9 @@ import 'package:get_it/get_it.dart' as _i1;
 import 'package:google_sign_in/google_sign_in.dart' as _i5;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:project_happynewyear/application/auth/auth_bloc/auth_bloc.dart'
-    as _i9;
-import 'package:project_happynewyear/application/auth/sign_in_page_bloc/sign_in_form_bloc.dart'
     as _i8;
+import 'package:project_happynewyear/application/auth/auth_ui_bloc/auth_ui_bloc.dart'
+    as _i9;
 import 'package:project_happynewyear/domain/auth/i_auth_facade.dart' as _i6;
 import 'package:project_happynewyear/infrastructure/auth/firebase_auth_facade.dart'
     as _i7;
@@ -44,9 +44,8 @@ extension GetItInjectableX on _i1.GetIt {
           gh<_i3.FirebaseAuth>(),
           gh<_i5.GoogleSignIn>(),
         ));
-    gh.factory<_i8.SignInFormBloc>(
-        () => _i8.SignInFormBloc(gh<_i6.IAuthFacade>()));
-    gh.factory<_i9.AuthBloc>(() => _i9.AuthBloc(gh<_i6.IAuthFacade>()));
+    gh.factory<_i8.AuthBloc>(() => _i8.AuthBloc(gh<_i6.IAuthFacade>()));
+    gh.factory<_i9.AuthUIBloc>(() => _i9.AuthUIBloc(gh<_i6.IAuthFacade>()));
     return this;
   }
 }

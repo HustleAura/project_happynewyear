@@ -6,6 +6,6 @@ part 'app_user.freezed.dart';
 @freezed
 abstract class AppUser with _$AppUser {
   const factory AppUser({
-    required UniqueId? uniqueId,
+    required UniqueId uniqueId,
   }) = _AppUser;
 }

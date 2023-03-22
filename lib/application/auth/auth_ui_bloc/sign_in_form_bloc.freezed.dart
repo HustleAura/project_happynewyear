@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'sign_in_form_bloc.dart';
+part of 'auth_ui_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -84,12 +84,12 @@ mixin _$SignInFormEvent {
 /// @nodoc
 abstract class $SignInFormEventCopyWith<$Res> {
   factory $SignInFormEventCopyWith(
-          SignInFormEvent value, $Res Function(SignInFormEvent) then) =
-      _$SignInFormEventCopyWithImpl<$Res, SignInFormEvent>;
+          AuthUIEvent value, $Res Function(AuthUIEvent) then) =
+      _$SignInFormEventCopyWithImpl<$Res, AuthUIEvent>;
 }
 
 /// @nodoc
-class _$SignInFormEventCopyWithImpl<$Res, $Val extends SignInFormEvent>
+class _$SignInFormEventCopyWithImpl<$Res, $Val extends AuthUIEvent>
     implements $SignInFormEventCopyWith<$Res> {
   _$SignInFormEventCopyWithImpl(this._value, this._then);
 
@@ -231,7 +231,7 @@ class _$RegisterPressed
   }
 }
 
-abstract class RegisterPressed implements SignInFormEvent {
+abstract class RegisterPressed implements AuthUIEvent {
   const factory RegisterPressed() = _$RegisterPressed;
 }
 
@@ -365,7 +365,7 @@ class _$SignInPressed with DiagnosticableTreeMixin implements SignInPressed {
   }
 }
 
-abstract class SignInPressed implements SignInFormEvent {
+abstract class SignInPressed implements AuthUIEvent {
   const factory SignInPressed() = _$SignInPressed;
 }
 
@@ -502,7 +502,7 @@ class _$SignInWithGooglePressed
   }
 }
 
-abstract class SignInWithGooglePressed implements SignInFormEvent {
+abstract class SignInWithGooglePressed implements AuthUIEvent {
   const factory SignInWithGooglePressed() = _$SignInWithGooglePressed;
 }
 
@@ -664,7 +664,7 @@ class _$NameChanged with DiagnosticableTreeMixin implements NameChanged {
   }
 }
 
-abstract class NameChanged implements SignInFormEvent {
+abstract class NameChanged implements AuthUIEvent {
   const factory NameChanged(final String nameString) = _$NameChanged;
 
   String get nameString;
@@ -831,7 +831,7 @@ class _$EmailChanged with DiagnosticableTreeMixin implements EmailChanged {
   }
 }
 
-abstract class EmailChanged implements SignInFormEvent {
+abstract class EmailChanged implements AuthUIEvent {
   const factory EmailChanged(final String emailString) = _$EmailChanged;
 
   String get emailString;
@@ -1000,7 +1000,7 @@ class _$PasswordChanged
   }
 }
 
-abstract class PasswordChanged implements SignInFormEvent {
+abstract class PasswordChanged implements AuthUIEvent {
   const factory PasswordChanged(final String passwordString) =
       _$PasswordChanged;
 
@@ -1021,15 +1021,15 @@ mixin _$SignInFormState {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $SignInFormStateCopyWith<SignInFormState> get copyWith =>
+  $SignInFormStateCopyWith<AuthUIState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SignInFormStateCopyWith<$Res> {
   factory $SignInFormStateCopyWith(
-          SignInFormState value, $Res Function(SignInFormState) then) =
-      _$SignInFormStateCopyWithImpl<$Res, SignInFormState>;
+          AuthUIState value, $Res Function(AuthUIState) then) =
+      _$SignInFormStateCopyWithImpl<$Res, AuthUIState>;
   @useResult
   $Res call(
       {Name name,
@@ -1041,7 +1041,7 @@ abstract class $SignInFormStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SignInFormStateCopyWithImpl<$Res, $Val extends SignInFormState>
+class _$SignInFormStateCopyWithImpl<$Res, $Val extends AuthUIState>
     implements $SignInFormStateCopyWith<$Res> {
   _$SignInFormStateCopyWithImpl(this._value, this._then);
 
@@ -1229,7 +1229,7 @@ class _$_SignInFormState
       __$$_SignInFormStateCopyWithImpl<_$_SignInFormState>(this, _$identity);
 }
 
-abstract class _SignInFormState implements SignInFormState {
+abstract class _SignInFormState implements AuthUIState {
   const factory _SignInFormState(
       {required final Name name,
       required final EmailAddress emailAddress,

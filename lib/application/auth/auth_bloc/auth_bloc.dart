@@ -27,7 +27,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
                     );
                   });
         },
-        signedOut: (e) {},
+        signedOut: (e) {
+          _authFacade.signOut();
+          emit(
+            const AuthState.unAuthenticated(),
+          );
+        },
       );
     });
   }

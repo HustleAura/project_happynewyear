@@ -1,8 +1,8 @@
-part of 'sign_in_form_bloc.dart';
+part of 'auth_ui_bloc.dart';
 
 @freezed
-class SignInFormState with _$SignInFormState {
-  const factory SignInFormState({
+class AuthUIState with _$SignInFormState {
+  const factory AuthUIState({
     required Name name,
     required EmailAddress emailAddress,
     required Password password,
@@ -11,8 +11,8 @@ class SignInFormState with _$SignInFormState {
     required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
   }) = _SignInFormState;
 
-  factory SignInFormState.initial() {
-    return SignInFormState(
+  factory AuthUIState.initial() {
+    return AuthUIState(
       name: Name(''),
       emailAddress: EmailAddress(''),
       password: Password(''),

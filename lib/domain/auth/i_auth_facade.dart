@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:project_happynewyear/domain/auth/app_user.dart';
+import 'package:project_happynewyear/domain/core/user/app_user.dart';
 
 import 'auth_failure.dart';
 import 'value_objects.dart';

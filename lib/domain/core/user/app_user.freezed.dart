@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AppUser {
-  UniqueId? get uniqueId => throw _privateConstructorUsedError;
+  UniqueId get uniqueId => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AppUserCopyWith<AppUser> get copyWith => throw _privateConstructorUsedError;
@@ -27,7 +27,7 @@ abstract class $AppUserCopyWith<$Res> {
   factory $AppUserCopyWith(AppUser value, $Res Function(AppUser) then) =
       _$AppUserCopyWithImpl<$Res, AppUser>;
   @useResult
-  $Res call({UniqueId? uniqueId});
+  $Res call({UniqueId uniqueId});
 }
 
 /// @nodoc
@@ -43,13 +43,13 @@ class _$AppUserCopyWithImpl<$Res, $Val extends AppUser>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? uniqueId = freezed,
+    Object? uniqueId = null,
   }) {
     return _then(_value.copyWith(
-      uniqueId: freezed == uniqueId
+      uniqueId: null == uniqueId
           ? _value.uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
-              as UniqueId?,
+              as UniqueId,
     ) as $Val);
   }
 }
@@ -61,7 +61,7 @@ abstract class _$$_AppUserCopyWith<$Res> implements $AppUserCopyWith<$Res> {
       __$$_AppUserCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UniqueId? uniqueId});
+  $Res call({UniqueId uniqueId});
 }
 
 /// @nodoc
@@ -74,13 +74,13 @@ class __$$_AppUserCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? uniqueId = freezed,
+    Object? uniqueId = null,
   }) {
     return _then(_$_AppUser(
-      uniqueId: freezed == uniqueId
+      uniqueId: null == uniqueId
           ? _value.uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
-              as UniqueId?,
+              as UniqueId,
     ));
   }
 }
@@ -91,7 +91,7 @@ class _$_AppUser implements _AppUser {
   const _$_AppUser({required this.uniqueId});
 
   @override
-  final UniqueId? uniqueId;
+  final UniqueId uniqueId;
 
   @override
   String toString() {
@@ -118,10 +118,10 @@ class _$_AppUser implements _AppUser {
 }
 
 abstract class _AppUser implements AppUser {
-  const factory _AppUser({required final UniqueId? uniqueId}) = _$_AppUser;
+  const factory _AppUser({required final UniqueId uniqueId}) = _$_AppUser;
 
   @override
-  UniqueId? get uniqueId;
+  UniqueId get uniqueId;
   @override
   @JsonKey(ignore: true)
   _$$_AppUserCopyWith<_$_AppUser> get copyWith =>
