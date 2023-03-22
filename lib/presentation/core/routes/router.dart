@@ -6,8 +6,8 @@ import 'package:project_happynewyear/presentation/home/home_page.dart';
 
 import '../constants.dart';
 
-class Router {
-  Route<dynamic> generateRoute(RouteSettings routeSettings) {
+class Routes {
+  static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
       case routeHomePage:
         return MaterialPageRoute(

@@ -1,9 +1,3 @@
-features included
-- authentication
-- list of diary entries
-- diary entry object and page
-
-
 - bug report 
 - user writing streak and profile
 - pic of the day
