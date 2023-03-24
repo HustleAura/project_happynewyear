@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:project_happynewyear/application/auth/auth_bloc/auth_bloc.dart';
 import 'package:project_happynewyear/application/auth/auth_ui_bloc/auth_ui_bloc.dart';
 
 import '../../core/constants.dart';
@@ -19,7 +20,11 @@ class AuthUIForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<AuthUIBloc, AuthUIState>(
       listener: (context, state) {
-        // TODO: implement listener
+        if (state.authFailureOrSuccessOption.isSome()) {
+          BlocProvider.of<AuthBloc>(context).add(
+            const AuthEvent.authCheckRequested(),
+          );
+        }
       },
       builder: (context, state) {
         return Form(

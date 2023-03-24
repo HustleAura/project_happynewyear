@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_happynewyear/injection.dart';
 import '../../application/auth/auth_ui_bloc/auth_ui_bloc.dart';
-import 'widgets/sign_in_form.dart';
+import 'widgets/auth_ui_form.dart';
 
 TextEditingController controller = TextEditingController();
 

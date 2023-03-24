@@ -15,17 +15,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       event.map(
         authCheckRequested: (e) {
           final userOption = _authFacade.getSignedInUser();
-          userOption.fold(
-              () => () {
-                    emit(
-                      const AuthState.unAuthenticated(),
-                    );
-                  },
-              (_) => () {
-                    emit(
-                      const AuthState.authenticated(),
-                    );
-                  });
+          emit(
+            userOption.fold(
+              () => const AuthState.unAuthenticated(),
+              (_) => const AuthState.authenticated(),
+            ),
+          );
         },
         signedOut: (e) {
           _authFacade.signOut();

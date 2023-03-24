@@ -21,17 +21,16 @@ class AuthUIBloc extends Bloc<AuthUIEvent, AuthUIState> {
     on<AuthUIEvent>((event, emit) {
       event.map(
         registerPressed: (e) async {
+          emit(
+            state.copyWith(
+              isSubmitting: true,
+              authFailureOrSuccessOption: none(),
+            ),
+          );
           bool isEmailValid = state.emailAddress.isValid;
           bool isPasswordValid = state.password.isValid;
 
           if (isEmailValid && isPasswordValid) {
-            emit(
-              state.copyWith(
-                isSubmitting: true,
-                authFailureOrSuccessOption: none(),
-              ),
-            );
-
             final failureOrSuccess =
                 await _authFacade.registerWithEmailAndPassword(
               email: state.emailAddress,
@@ -46,19 +45,18 @@ class AuthUIBloc extends Bloc<AuthUIEvent, AuthUIState> {
           }
         },
         signInPressed: (e) async {
+          emit(
+            state.copyWith(
+              isSubmitting: true,
+              authFailureOrSuccessOption: none(),
+            ),
+          );
           bool isEmailValid = state.emailAddress.isValid;
           bool isPasswordValid = state.password.isValid;
 
           if (isEmailValid && isPasswordValid) {
-            emit(
-              state.copyWith(
-                isSubmitting: true,
-                authFailureOrSuccessOption: none(),
-              ),
-            );
-
             final failureOrSuccess =
-                await _authFacade.registerWithEmailAndPassword(
+                await _authFacade.signInWithEmailAndPassword(
               email: state.emailAddress,
               password: state.password,
             );

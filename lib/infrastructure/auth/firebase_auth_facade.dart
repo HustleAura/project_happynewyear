@@ -63,6 +63,10 @@ class FirebaseAuthFacade implements IAuthFacade {
         return left(
           const AuthFailure.invalidEmailAndPassword(),
         );
+      } else if (e.code == 'email-already-in-use') {
+        return left(
+          const AuthFailure.emailAlreadyInUse(),
+        );
       } else {
         return left(
           const AuthFailure.serverError(),

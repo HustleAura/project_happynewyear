@@ -7,7 +7,6 @@ import 'package:project_happynewyear/presentation/core/routes/router.dart';
 import 'package:project_happynewyear/presentation/core/splash_page.dart';
 
 import '../../injection.dart';
-import '../home/home_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({
@@ -19,10 +18,12 @@ class AppWidget extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<AuthBloc>(
-          create: (context) => getIt<AuthBloc>()
-            ..add(
-              const AuthEvent.authCheckRequested(),
-            ),
+          create: (context) {
+            return getIt<AuthBloc>()
+              ..add(
+                const AuthEvent.authCheckRequested(),
+              );
+          },
         ),
       ],
       child: MaterialApp(
