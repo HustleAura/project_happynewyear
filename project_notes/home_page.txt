@@ -1,5 +1,0 @@
-Home page 
-- background
-- list of diary entries
-- a new entry button
-- drawer access

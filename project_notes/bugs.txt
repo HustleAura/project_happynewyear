@@ -1,2 +1,0 @@
-fix the auto validation form logic. 
-Change it to auto validate after signin/register button is hit.

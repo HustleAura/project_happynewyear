@@ -1,0 +1,2 @@
+sign in bug as emitter in auth ui bloc did not work
+fix - the event.map function is async function and needs to be awaited. Did not do that

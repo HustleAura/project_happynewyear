@@ -1,4 +1,0 @@
-Diary Entry page 
-- Date of entry - calender formatting
-- title of the entry
-- textfield with very large limit.

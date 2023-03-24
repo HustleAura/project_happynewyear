@@ -1,5 +1,0 @@
-- bug report 
-- user writing streak and profile
-- pic of the day
-- book notes highlighter
-- book recommendation

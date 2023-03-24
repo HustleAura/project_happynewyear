@@ -1,0 +1,2 @@
+password show/hide toggle
+pixel overflow with keyboard in home page

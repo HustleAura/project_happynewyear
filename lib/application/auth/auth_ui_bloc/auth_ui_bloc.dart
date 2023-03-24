@@ -18,8 +18,8 @@ class AuthUIBloc extends Bloc<AuthUIEvent, AuthUIState> {
   final IAuthFacade _authFacade;
 
   AuthUIBloc(this._authFacade) : super(AuthUIState.initial()) {
-    on<AuthUIEvent>((event, emit) {
-      event.map(
+    on<AuthUIEvent>((event, emit) async {
+      await event.map(
         registerPressed: (e) async {
           emit(
             state.copyWith(
