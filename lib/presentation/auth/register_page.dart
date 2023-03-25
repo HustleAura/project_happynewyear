@@ -15,7 +15,7 @@ class RegisterPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 83),
         child: BlocProvider(
           create: (context) => getIt<AuthUIBloc>(),
-          child: RegisterForm(),
+          child: const RegisterForm(),
         ),
       ),
     );

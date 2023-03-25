@@ -77,6 +77,7 @@ class AuthUIBloc extends Bloc<AuthUIEvent, AuthUIState> {
           );
 
           final failureOrSuccess = await _authFacade.signInWithGoogle();
+          print(failureOrSuccess.isLeft().toString());
           emit(
             state.copyWith(
               authFailureOrSuccessOption: some(failureOrSuccess),

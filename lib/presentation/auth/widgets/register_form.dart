@@ -38,6 +38,9 @@ class RegisterForm extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
+                  height: fullScreenHeight * 0.095,
+                ),
+                SizedBox(
                   height: fullScreenHeight * 0.225,
                   child: LottieBuilder.asset(authLottie),
                 ),
@@ -100,6 +103,11 @@ class RegisterForm extends StatelessWidget {
                                 (p) => null,
                               ),
                     ),
+                    const Divider(
+                      indent: 100,
+                      endIndent: 100,
+                      thickness: 2,
+                    ),
                     RoundedButton(
                       text: 'REGISTER',
                       onPressedFunction: () {
@@ -107,9 +115,8 @@ class RegisterForm extends StatelessWidget {
                               const AuthUIEvent.registerPressed(),
                             );
                       },
-                      backgroundColor: darkPrimaryColor,
+                      backgroundColor: darkPrimaryColor2,
                     ),
-                    const GoogleAuthButton(),
                     const RegisterToSignIn(),
                   ],
                 ),

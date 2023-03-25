@@ -33,7 +33,7 @@ class GoogleAuthButton extends StatelessWidget {
               color: darkPrimaryColor2,
             ),
             label: const Text(
-              'Register / Sign in with Google',
+              'Sign in with Google',
               style: TextStyle(
                 color: blackColor,
               ),

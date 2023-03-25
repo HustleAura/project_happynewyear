@@ -11,8 +11,8 @@ import 'rounded_button.dart';
 import 'signin_register_switch.dart';
 import 'username_field.dart';
 
-class AuthUIForm extends StatelessWidget {
-  const AuthUIForm({
+class SignInForm extends StatelessWidget {
+  const SignInForm({
     super.key,
   });
 
