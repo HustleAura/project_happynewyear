@@ -1,3 +1,4 @@
 password show/hide toggle
 pixel overflow with keyboard in home page
 google auto register requires user to press the button twice to authenticate
+start with empty diary title and empty body
