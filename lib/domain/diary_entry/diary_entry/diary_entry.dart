@@ -19,7 +19,7 @@ abstract class DiaryEntry with _$DiaryEntry {
       uniqueId: UniqueId(),
       diaryDate: DiaryDate.today(),
       diaryTitle: DiaryTitle('Enter your title here'),
-      diaryBody: DiaryBody('And finally how\'s your day been?'),
+      diaryBody: DiaryBody('And so how\'s your day been?'),
     );
   }
 }
