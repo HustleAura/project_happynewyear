@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-import '../../../application/auth/auth_ui_bloc/auth_ui_bloc.dart';
+import '../../../application/auth/auth_ui/auth_ui_bloc.dart';
 import '../../core/constants.dart';
 import 'field_decoration.dart';
 

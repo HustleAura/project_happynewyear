@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:project_happynewyear/application/auth/auth_bloc/auth_bloc.dart';
-import 'package:project_happynewyear/application/auth/auth_ui_bloc/auth_ui_bloc.dart';
+import 'package:project_happynewyear/application/auth/auth_ui/auth_ui_bloc.dart';
 
 import '../../core/constants.dart';
 import 'google_sign_in_button.dart';
