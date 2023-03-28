@@ -16,11 +16,11 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ValueFailure<T> {
-  T get failedValue => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T failedValue) invalidEmail,
     required TResult Function(T failedValue) shortPassword,
+    required TResult Function() invalidDate,
     required TResult Function(T failedValue) invalidTitle,
     required TResult Function(T failedValue) emptyEntry,
   }) =>
@@ -29,6 +29,7 @@ mixin _$ValueFailure<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T failedValue)? invalidEmail,
     TResult? Function(T failedValue)? shortPassword,
+    TResult? Function()? invalidDate,
     TResult? Function(T failedValue)? invalidTitle,
     TResult? Function(T failedValue)? emptyEntry,
   }) =>
@@ -37,6 +38,7 @@ mixin _$ValueFailure<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T failedValue)? invalidEmail,
     TResult Function(T failedValue)? shortPassword,
+    TResult Function()? invalidDate,
     TResult Function(T failedValue)? invalidTitle,
     TResult Function(T failedValue)? emptyEntry,
     required TResult orElse(),
@@ -46,6 +48,7 @@ mixin _$ValueFailure<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidTitle<T> value) invalidTitle,
     required TResult Function(EmptyEntry<T> value) emptyEntry,
   }) =>
@@ -54,6 +57,7 @@ mixin _$ValueFailure<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidTitle<T> value)? invalidTitle,
     TResult? Function(EmptyEntry<T> value)? emptyEntry,
   }) =>
@@ -62,14 +66,11 @@ mixin _$ValueFailure<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidTitle<T> value)? invalidTitle,
     TResult Function(EmptyEntry<T> value)? emptyEntry,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -78,8 +79,6 @@ abstract class $ValueFailureCopyWith<T, $Res> {
   factory $ValueFailureCopyWith(
           ValueFailure<T> value, $Res Function(ValueFailure<T>) then) =
       _$ValueFailureCopyWithImpl<T, $Res, ValueFailure<T>>;
-  @useResult
-  $Res call({T failedValue});
 }
 
 /// @nodoc
@@ -91,28 +90,13 @@ class _$ValueFailureCopyWithImpl<T, $Res, $Val extends ValueFailure<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? failedValue = freezed,
-  }) {
-    return _then(_value.copyWith(
-      failedValue: freezed == failedValue
-          ? _value.failedValue
-          : failedValue // ignore: cast_nullable_to_non_nullable
-              as T,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$InvalidEmailCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$InvalidEmailCopyWith<T, $Res> {
   factory _$$InvalidEmailCopyWith(
           _$InvalidEmail<T> value, $Res Function(_$InvalidEmail<T>) then) =
       __$$InvalidEmailCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue});
 }
@@ -176,6 +160,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T failedValue) invalidEmail,
     required TResult Function(T failedValue) shortPassword,
+    required TResult Function() invalidDate,
     required TResult Function(T failedValue) invalidTitle,
     required TResult Function(T failedValue) emptyEntry,
   }) {
@@ -187,6 +172,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T failedValue)? invalidEmail,
     TResult? Function(T failedValue)? shortPassword,
+    TResult? Function()? invalidDate,
     TResult? Function(T failedValue)? invalidTitle,
     TResult? Function(T failedValue)? emptyEntry,
   }) {
@@ -198,6 +184,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T failedValue)? invalidEmail,
     TResult Function(T failedValue)? shortPassword,
+    TResult Function()? invalidDate,
     TResult Function(T failedValue)? invalidTitle,
     TResult Function(T failedValue)? emptyEntry,
     required TResult orElse(),
@@ -213,6 +200,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidTitle<T> value) invalidTitle,
     required TResult Function(EmptyEntry<T> value) emptyEntry,
   }) {
@@ -224,6 +212,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidTitle<T> value)? invalidTitle,
     TResult? Function(EmptyEntry<T> value)? emptyEntry,
   }) {
@@ -235,6 +224,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidTitle<T> value)? invalidTitle,
     TResult Function(EmptyEntry<T> value)? emptyEntry,
     required TResult orElse(),
@@ -250,21 +240,17 @@ abstract class InvalidEmail<T> implements ValueFailure<T> {
   const factory InvalidEmail({required final T failedValue}) =
       _$InvalidEmail<T>;
 
-  @override
   T get failedValue;
-  @override
   @JsonKey(ignore: true)
   _$$InvalidEmailCopyWith<T, _$InvalidEmail<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ShortPasswordCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$ShortPasswordCopyWith<T, $Res> {
   factory _$$ShortPasswordCopyWith(
           _$ShortPassword<T> value, $Res Function(_$ShortPassword<T>) then) =
       __$$ShortPasswordCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue});
 }
@@ -328,6 +314,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T failedValue) invalidEmail,
     required TResult Function(T failedValue) shortPassword,
+    required TResult Function() invalidDate,
     required TResult Function(T failedValue) invalidTitle,
     required TResult Function(T failedValue) emptyEntry,
   }) {
@@ -339,6 +326,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T failedValue)? invalidEmail,
     TResult? Function(T failedValue)? shortPassword,
+    TResult? Function()? invalidDate,
     TResult? Function(T failedValue)? invalidTitle,
     TResult? Function(T failedValue)? emptyEntry,
   }) {
@@ -350,6 +338,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T failedValue)? invalidEmail,
     TResult Function(T failedValue)? shortPassword,
+    TResult Function()? invalidDate,
     TResult Function(T failedValue)? invalidTitle,
     TResult Function(T failedValue)? emptyEntry,
     required TResult orElse(),
@@ -365,6 +354,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidTitle<T> value) invalidTitle,
     required TResult Function(EmptyEntry<T> value) emptyEntry,
   }) {
@@ -376,6 +366,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidTitle<T> value)? invalidTitle,
     TResult? Function(EmptyEntry<T> value)? emptyEntry,
   }) {
@@ -387,6 +378,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidTitle<T> value)? invalidTitle,
     TResult Function(EmptyEntry<T> value)? emptyEntry,
     required TResult orElse(),
@@ -402,21 +394,137 @@ abstract class ShortPassword<T> implements ValueFailure<T> {
   const factory ShortPassword({required final T failedValue}) =
       _$ShortPassword<T>;
 
-  @override
   T get failedValue;
-  @override
   @JsonKey(ignore: true)
   _$$ShortPasswordCopyWith<T, _$ShortPassword<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$InvalidTitleCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$InvalidDateCopyWith<T, $Res> {
+  factory _$$InvalidDateCopyWith(
+          _$InvalidDate<T> value, $Res Function(_$InvalidDate<T>) then) =
+      __$$InvalidDateCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$InvalidDateCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidDate<T>>
+    implements _$$InvalidDateCopyWith<T, $Res> {
+  __$$InvalidDateCopyWithImpl(
+      _$InvalidDate<T> _value, $Res Function(_$InvalidDate<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$InvalidDate<T> implements InvalidDate<T> {
+  const _$InvalidDate();
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.invalidDate()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InvalidDate<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidEmail,
+    required TResult Function(T failedValue) shortPassword,
+    required TResult Function() invalidDate,
+    required TResult Function(T failedValue) invalidTitle,
+    required TResult Function(T failedValue) emptyEntry,
+  }) {
+    return invalidDate();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? shortPassword,
+    TResult? Function()? invalidDate,
+    TResult? Function(T failedValue)? invalidTitle,
+    TResult? Function(T failedValue)? emptyEntry,
+  }) {
+    return invalidDate?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function()? invalidDate,
+    TResult Function(T failedValue)? invalidTitle,
+    TResult Function(T failedValue)? emptyEntry,
+    required TResult orElse(),
+  }) {
+    if (invalidDate != null) {
+      return invalidDate();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidEmail<T> value) invalidEmail,
+    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(InvalidDate<T> value) invalidDate,
+    required TResult Function(InvalidTitle<T> value) invalidTitle,
+    required TResult Function(EmptyEntry<T> value) emptyEntry,
+  }) {
+    return invalidDate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidDate<T> value)? invalidDate,
+    TResult? Function(InvalidTitle<T> value)? invalidTitle,
+    TResult? Function(EmptyEntry<T> value)? emptyEntry,
+  }) {
+    return invalidDate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(InvalidDate<T> value)? invalidDate,
+    TResult Function(InvalidTitle<T> value)? invalidTitle,
+    TResult Function(EmptyEntry<T> value)? emptyEntry,
+    required TResult orElse(),
+  }) {
+    if (invalidDate != null) {
+      return invalidDate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidDate<T> implements ValueFailure<T> {
+  const factory InvalidDate() = _$InvalidDate<T>;
+}
+
+/// @nodoc
+abstract class _$$InvalidTitleCopyWith<T, $Res> {
   factory _$$InvalidTitleCopyWith(
           _$InvalidTitle<T> value, $Res Function(_$InvalidTitle<T>) then) =
       __$$InvalidTitleCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue});
 }
@@ -480,6 +588,7 @@ class _$InvalidTitle<T> implements InvalidTitle<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T failedValue) invalidEmail,
     required TResult Function(T failedValue) shortPassword,
+    required TResult Function() invalidDate,
     required TResult Function(T failedValue) invalidTitle,
     required TResult Function(T failedValue) emptyEntry,
   }) {
@@ -491,6 +600,7 @@ class _$InvalidTitle<T> implements InvalidTitle<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T failedValue)? invalidEmail,
     TResult? Function(T failedValue)? shortPassword,
+    TResult? Function()? invalidDate,
     TResult? Function(T failedValue)? invalidTitle,
     TResult? Function(T failedValue)? emptyEntry,
   }) {
@@ -502,6 +612,7 @@ class _$InvalidTitle<T> implements InvalidTitle<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T failedValue)? invalidEmail,
     TResult Function(T failedValue)? shortPassword,
+    TResult Function()? invalidDate,
     TResult Function(T failedValue)? invalidTitle,
     TResult Function(T failedValue)? emptyEntry,
     required TResult orElse(),
@@ -517,6 +628,7 @@ class _$InvalidTitle<T> implements InvalidTitle<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidTitle<T> value) invalidTitle,
     required TResult Function(EmptyEntry<T> value) emptyEntry,
   }) {
@@ -528,6 +640,7 @@ class _$InvalidTitle<T> implements InvalidTitle<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidTitle<T> value)? invalidTitle,
     TResult? Function(EmptyEntry<T> value)? emptyEntry,
   }) {
@@ -539,6 +652,7 @@ class _$InvalidTitle<T> implements InvalidTitle<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidTitle<T> value)? invalidTitle,
     TResult Function(EmptyEntry<T> value)? emptyEntry,
     required TResult orElse(),
@@ -554,21 +668,17 @@ abstract class InvalidTitle<T> implements ValueFailure<T> {
   const factory InvalidTitle({required final T failedValue}) =
       _$InvalidTitle<T>;
 
-  @override
   T get failedValue;
-  @override
   @JsonKey(ignore: true)
   _$$InvalidTitleCopyWith<T, _$InvalidTitle<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$EmptyEntryCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$EmptyEntryCopyWith<T, $Res> {
   factory _$$EmptyEntryCopyWith(
           _$EmptyEntry<T> value, $Res Function(_$EmptyEntry<T>) then) =
       __$$EmptyEntryCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue});
 }
@@ -632,6 +742,7 @@ class _$EmptyEntry<T> implements EmptyEntry<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T failedValue) invalidEmail,
     required TResult Function(T failedValue) shortPassword,
+    required TResult Function() invalidDate,
     required TResult Function(T failedValue) invalidTitle,
     required TResult Function(T failedValue) emptyEntry,
   }) {
@@ -643,6 +754,7 @@ class _$EmptyEntry<T> implements EmptyEntry<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T failedValue)? invalidEmail,
     TResult? Function(T failedValue)? shortPassword,
+    TResult? Function()? invalidDate,
     TResult? Function(T failedValue)? invalidTitle,
     TResult? Function(T failedValue)? emptyEntry,
   }) {
@@ -654,6 +766,7 @@ class _$EmptyEntry<T> implements EmptyEntry<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T failedValue)? invalidEmail,
     TResult Function(T failedValue)? shortPassword,
+    TResult Function()? invalidDate,
     TResult Function(T failedValue)? invalidTitle,
     TResult Function(T failedValue)? emptyEntry,
     required TResult orElse(),
@@ -669,6 +782,7 @@ class _$EmptyEntry<T> implements EmptyEntry<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidTitle<T> value) invalidTitle,
     required TResult Function(EmptyEntry<T> value) emptyEntry,
   }) {
@@ -680,6 +794,7 @@ class _$EmptyEntry<T> implements EmptyEntry<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(ShortPassword<T> value)? shortPassword,
+    TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidTitle<T> value)? invalidTitle,
     TResult? Function(EmptyEntry<T> value)? emptyEntry,
   }) {
@@ -691,6 +806,7 @@ class _$EmptyEntry<T> implements EmptyEntry<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidTitle<T> value)? invalidTitle,
     TResult Function(EmptyEntry<T> value)? emptyEntry,
     required TResult orElse(),
@@ -705,9 +821,7 @@ class _$EmptyEntry<T> implements EmptyEntry<T> {
 abstract class EmptyEntry<T> implements ValueFailure<T> {
   const factory EmptyEntry({required final T failedValue}) = _$EmptyEntry<T>;
 
-  @override
   T get failedValue;
-  @override
   @JsonKey(ignore: true)
   _$$EmptyEntryCopyWith<T, _$EmptyEntry<T>> get copyWith =>
       throw _privateConstructorUsedError;

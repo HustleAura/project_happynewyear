@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_happynewyear/presentation/auth/sign_in_page.dart';
 
-import '../../application/auth/auth_bloc/auth_bloc.dart';
+import '../../application/auth/auth/auth_bloc.dart';
 import '../home/home_page.dart';
 
 class SplashPage extends StatelessWidget {

@@ -42,3 +42,16 @@ class Password extends ValueObjects<String> {
 
   Password._(this.value);
 }
+
+class Name extends ValueObjects<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory Name(String input) {
+    return Name._(
+      validatedName(input),
+    );
+  }
+
+  Name._(this.value);
+}

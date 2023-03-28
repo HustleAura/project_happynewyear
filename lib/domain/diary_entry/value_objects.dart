@@ -24,6 +24,12 @@ class DiaryDate extends ValueObjects<DateTime> {
     );
   }
 
+  factory DiaryDate.fromStringDate(String date) {
+    return DiaryDate._(
+      validatedDatefromString(date),
+    );
+  }
+
   @override
   String toString() {
     return '$date/$month/$year';
