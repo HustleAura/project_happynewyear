@@ -10,9 +10,9 @@ import 'package:firebase_auth/firebase_auth.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:google_sign_in/google_sign_in.dart' as _i5;
 import 'package:injectable/injectable.dart' as _i2;
-import 'package:project_happynewyear/application/auth/auth_bloc/auth_bloc.dart'
+import 'package:project_happynewyear/application/auth/auth/auth_bloc.dart'
     as _i8;
-import 'package:project_happynewyear/application/auth/auth_ui_bloc/auth_ui_bloc.dart'
+import 'package:project_happynewyear/application/auth/auth_ui/auth_ui_bloc.dart'
     as _i9;
 import 'package:project_happynewyear/domain/auth/i_auth_facade.dart' as _i6;
 import 'package:project_happynewyear/infrastructure/auth/firebase_auth_facade.dart'
