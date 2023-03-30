@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:project_happynewyear/domain/auth/user/app_user.dart';
 
@@ -40,4 +41,10 @@ abstract class DiaryEntryDto implements _$DiaryEntryDto {
   // implement to and from json methods
   factory DiaryEntryDto.fromJson(Map<String, dynamic> json) =>
       _$DiaryEntryDtoFromJson(json);
+
+  factory DiaryEntryDto.fromFirestore(DocumentSnapshot docSnapshot) {
+    return DiaryEntryDto.fromJson(
+      docSnapshot.data() as Map<String, dynamic>,
+    );
+  }
 }
