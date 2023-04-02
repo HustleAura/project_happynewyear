@@ -12,8 +12,6 @@ class AuthPage extends StatelessWidget {
     return Scaffold(
       body: BlocConsumer<AuthUIBloc, AuthUIState>(
         listener: (context, state) {
-          print('this block is executed');
-          print('Even inside the if condition');
           BlocProvider.of<AuthBloc>(context).add(
             const AuthEvent.authCheckRequested(),
           );
@@ -25,7 +23,6 @@ class AuthPage extends StatelessWidget {
               children: [
                 TextFormField(
                   onChanged: (emailString) {
-                    print('on changed executed email');
                     BlocProvider.of<AuthUIBloc>(context).add(
                       EmailChanged(emailString),
                     );
@@ -33,7 +30,6 @@ class AuthPage extends StatelessWidget {
                 ),
                 TextFormField(
                   onChanged: (passwordString) {
-                    print('on changed executed password');
                     BlocProvider.of<AuthUIBloc>(context).add(
                       PasswordChanged(passwordString),
                     );

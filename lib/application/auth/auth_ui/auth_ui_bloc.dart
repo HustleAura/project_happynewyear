@@ -85,7 +85,6 @@ class AuthUIBloc extends Bloc<AuthUIEvent, AuthUIState> {
           );
         },
         emailChanged: (e) {
-          print('came here from the auth sample form email');
           emit(
             state.copyWith(
               emailAddress: EmailAddress(e.emailString),
@@ -94,7 +93,6 @@ class AuthUIBloc extends Bloc<AuthUIEvent, AuthUIState> {
           );
         },
         passwordChanged: (e) {
-          print('came here from the auth sample form password');
           emit(
             state.copyWith(
               password: Password(e.passwordString),
