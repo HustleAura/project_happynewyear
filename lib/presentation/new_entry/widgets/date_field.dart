@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project_happynewyear/presentation/diary_entry/widgets/diary_field_decoration.dart';
+import 'package:project_happynewyear/presentation/new_entry/widgets/diary_field_decoration.dart';
 
 import '../../core/constants.dart';
 

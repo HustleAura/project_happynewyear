@@ -30,14 +30,6 @@ class AppWidget extends StatelessWidget {
         title: 'My LifeBook',
         debugShowCheckedModeBanner: false,
         onGenerateRoute: Routes.generateRoute,
-        theme: ThemeData.light().copyWith(
-          primaryColor: primaryColor,
-          scaffoldBackgroundColor: backgroundColor,
-          colorScheme: ColorScheme.fromSwatch(
-            accentColor: primaryColor,
-            primaryColorDark: darkPrimaryColor,
-          ),
-        ),
         home: BlocProvider(
           create: (context) => getIt<AuthUIBloc>(),
           child: const SplashPage(),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:project_happynewyear/presentation/core/constants.dart';
-import 'package:project_happynewyear/presentation/diary_entry/widgets/date_field.dart';
-import 'package:project_happynewyear/presentation/diary_entry/widgets/diary_entry_field.dart';
-import 'package:project_happynewyear/presentation/diary_entry/widgets/finish_button.dart';
+import 'package:project_happynewyear/presentation/new_entry/widgets/date_field.dart';
+import 'package:project_happynewyear/presentation/new_entry/widgets/diary_entry_field.dart';
+import 'package:project_happynewyear/presentation/new_entry/widgets/finish_button.dart';
 
-class DiaryEntryPage extends StatelessWidget {
-  const DiaryEntryPage({super.key});
+class NewEntryPage extends StatelessWidget {
+  const NewEntryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
