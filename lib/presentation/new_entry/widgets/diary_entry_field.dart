@@ -19,13 +19,13 @@ class DiaryEntryField extends StatelessWidget {
       child: TextFormField(
         maxLines: maxLimit,
         autocorrect: false,
-        cursorColor: fontColor,
+        // cursorColor: fontColor,
         decoration: InputDecoration(
           border: InputBorder.none,
           hintText: hintText,
           hintStyle: GoogleFonts.kalam(
-            color: fontColor,
-          ),
+              // color: fontColor,
+              ),
         ),
         style: GoogleFonts.kalam(),
       ),

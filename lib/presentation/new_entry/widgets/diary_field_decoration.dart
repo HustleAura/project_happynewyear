@@ -21,7 +21,7 @@ class DiaryFieldDecoration extends StatelessWidget {
         horizontal: 20,
       ),
       decoration: BoxDecoration(
-        color: tileColor,
+        // color: tileColor,
         borderRadius: BorderRadius.circular(15),
       ),
       child: child,
