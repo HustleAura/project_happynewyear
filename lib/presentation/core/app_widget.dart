@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_happynewyear/application/auth/auth_ui/auth_ui_bloc.dart';
+import 'package:project_happynewyear/application/user_dashboard/user_dashboard_bloc.dart';
 import 'package:project_happynewyear/presentation/core/constants.dart';
 import 'package:project_happynewyear/presentation/core/routes/router.dart';
 import 'package:project_happynewyear/presentation/core/splash_page.dart';
@@ -18,22 +19,29 @@ class AppWidget extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<AuthBloc>(
-          create: (context) {
+          create: (_) {
             return getIt<AuthBloc>()
               ..add(
                 const AuthEvent.authCheckRequested(),
               );
           },
         ),
+        BlocProvider(
+          create: (_) {
+            return getIt<AuthUIBloc>();
+          },
+        ),
+        BlocProvider(
+          create: (_) {
+            return getIt<UserDashboardBloc>();
+          },
+        ),
       ],
-      child: MaterialApp(
+      child: const MaterialApp(
         title: 'My LifeBook',
         debugShowCheckedModeBanner: false,
         onGenerateRoute: Routes.generateRoute,
-        home: BlocProvider(
-          create: (context) => getIt<AuthUIBloc>(),
-          child: const SplashPage(),
-        ),
+        home: SplashPage(),
       ),
     );
   }

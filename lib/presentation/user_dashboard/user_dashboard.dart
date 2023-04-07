@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:project_happynewyear/presentation/core/constants.dart';
 
-import '../../application/auth/auth/auth_bloc.dart';
+import '../profile/profile_page.dart';
+import 'widgets/nav_bar.dart';
+import '../todo/todo_home.dart';
+import '../diary/diary_home.dart';
+import '../../application/user_dashboard/user_dashboard_bloc.dart';
 
 class UserDashboard extends StatelessWidget {
   const UserDashboard({super.key});
@@ -9,17 +14,36 @@ class UserDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: GestureDetector(
-          onTap: () {
-            BlocProvider.of<AuthBloc>(context).add(
-              const AuthEvent.signedOut(),
-            );
-          },
-          child: const Text(
-            'Temporary Sign out',
+      body: Row(
+        children: [
+          Expanded(
+            flex: 6,
+            child: BlocBuilder<UserDashboardBloc, UserDashboardState>(
+              builder: (context, state) {
+                if (state == const UserDashboardState.diaryScreen()) {
+                  return Container(
+                    color: whiteColor,
+                    child: const DiaryHome(),
+                  );
+                } else if (state == const UserDashboardState.toDoScreen()) {
+                  return Container(
+                    color: backGroundColor,
+                    child: const ToDoHome(),
+                  );
+                } else {
+                  return Container(
+                    color: whiteColor,
+                    child: const ProfilePage(),
+                  );
+                }
+              },
+            ),
           ),
-        ),
+          const Expanded(
+            flex: 1,
+            child: NavBar(),
+          ),
+        ],
       ),
     );
   }

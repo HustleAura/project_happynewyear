@@ -41,9 +41,9 @@ class AuthPage extends StatelessWidget {
                   child: ListView(
                     children: [
                       EmailField(
-                        onChanged: (passwordString) {
+                        onChanged: (emailString) {
                           BlocProvider.of<AuthUIBloc>(context).add(
-                            PasswordChanged(passwordString),
+                            EmailChanged(emailString),
                           );
                         },
                       ),

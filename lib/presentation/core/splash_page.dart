@@ -13,16 +13,10 @@ class SplashPage extends StatelessWidget {
     return BlocBuilder<AuthBloc, AuthState>(
       builder: (context, authState) {
         if (authState == const AuthState.authenticated()) {
-          print(
-              'The state is authenticated and the route displayed should be homepage');
           return const UserDashboard();
         } else if (authState == const AuthState.unAuthenticated()) {
-          print(
-              'The state is unauthenticated and the route displayed should be login screen');
           return const AuthPage();
         } else {
-          print(
-              'The state is unknown so there should be a circular indicator on the screen');
           return const Scaffold(
             body: Center(
               child: CircularProgressIndicator(),

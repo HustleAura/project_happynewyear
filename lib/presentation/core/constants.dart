@@ -8,6 +8,7 @@ const backGroundColor = Color(0xFFF9B2B0);
 
 //images
 const authScreenLogoPath = 'assets/images/auth_screen_logo.png';
+const diaryScreenLogoPath = 'assets/images/diary_screen_logo.png';
 
 // screen size
 final fullScreenSize =
