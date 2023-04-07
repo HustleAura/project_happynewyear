@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:project_happynewyear/presentation/diary/diary_entry_tile.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:project_happynewyear/application/user_dashboard/user_dashboard_bloc.dart';
+import 'package:project_happynewyear/presentation/diary/widgets/diary_entry_tile.dart';
+import 'package:project_happynewyear/presentation/user_dashboard/user_dashboard.dart';
 
 import '../core/constants.dart';
 
@@ -29,7 +32,11 @@ class DiaryHome extends StatelessWidget {
                   height: 30,
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    BlocProvider.of<UserDashboardBloc>(context).add(
+                      const UserDashboardEvent.newEntryPressed(),
+                    );
+                  },
                   icon: const Icon(
                     Icons.add_circle_outline,
                     size: 60,

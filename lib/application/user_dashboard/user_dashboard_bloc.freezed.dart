@@ -21,6 +21,7 @@ mixin _$UserDashboardEvent {
     required TResult Function() toDoPressed,
     required TResult Function() diaryPressed,
     required TResult Function() profilePressed,
+    required TResult Function() newEntryPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$UserDashboardEvent {
     TResult? Function()? toDoPressed,
     TResult? Function()? diaryPressed,
     TResult? Function()? profilePressed,
+    TResult? Function()? newEntryPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$UserDashboardEvent {
     TResult Function()? toDoPressed,
     TResult Function()? diaryPressed,
     TResult Function()? profilePressed,
+    TResult Function()? newEntryPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$UserDashboardEvent {
     required TResult Function(_ToDoPressed value) toDoPressed,
     required TResult Function(_DiaryPressed value) diaryPressed,
     required TResult Function(_ProfilePressed value) profilePressed,
+    required TResult Function(_NewEntryPressed value) newEntryPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$UserDashboardEvent {
     TResult? Function(_ToDoPressed value)? toDoPressed,
     TResult? Function(_DiaryPressed value)? diaryPressed,
     TResult? Function(_ProfilePressed value)? profilePressed,
+    TResult? Function(_NewEntryPressed value)? newEntryPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$UserDashboardEvent {
     TResult Function(_ToDoPressed value)? toDoPressed,
     TResult Function(_DiaryPressed value)? diaryPressed,
     TResult Function(_ProfilePressed value)? profilePressed,
+    TResult Function(_NewEntryPressed value)? newEntryPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -121,6 +127,7 @@ class _$_ToDoPressed implements _ToDoPressed {
     required TResult Function() toDoPressed,
     required TResult Function() diaryPressed,
     required TResult Function() profilePressed,
+    required TResult Function() newEntryPressed,
   }) {
     return toDoPressed();
   }
@@ -131,6 +138,7 @@ class _$_ToDoPressed implements _ToDoPressed {
     TResult? Function()? toDoPressed,
     TResult? Function()? diaryPressed,
     TResult? Function()? profilePressed,
+    TResult? Function()? newEntryPressed,
   }) {
     return toDoPressed?.call();
   }
@@ -141,6 +149,7 @@ class _$_ToDoPressed implements _ToDoPressed {
     TResult Function()? toDoPressed,
     TResult Function()? diaryPressed,
     TResult Function()? profilePressed,
+    TResult Function()? newEntryPressed,
     required TResult orElse(),
   }) {
     if (toDoPressed != null) {
@@ -155,6 +164,7 @@ class _$_ToDoPressed implements _ToDoPressed {
     required TResult Function(_ToDoPressed value) toDoPressed,
     required TResult Function(_DiaryPressed value) diaryPressed,
     required TResult Function(_ProfilePressed value) profilePressed,
+    required TResult Function(_NewEntryPressed value) newEntryPressed,
   }) {
     return toDoPressed(this);
   }
@@ -165,6 +175,7 @@ class _$_ToDoPressed implements _ToDoPressed {
     TResult? Function(_ToDoPressed value)? toDoPressed,
     TResult? Function(_DiaryPressed value)? diaryPressed,
     TResult? Function(_ProfilePressed value)? profilePressed,
+    TResult? Function(_NewEntryPressed value)? newEntryPressed,
   }) {
     return toDoPressed?.call(this);
   }
@@ -175,6 +186,7 @@ class _$_ToDoPressed implements _ToDoPressed {
     TResult Function(_ToDoPressed value)? toDoPressed,
     TResult Function(_DiaryPressed value)? diaryPressed,
     TResult Function(_ProfilePressed value)? profilePressed,
+    TResult Function(_NewEntryPressed value)? newEntryPressed,
     required TResult orElse(),
   }) {
     if (toDoPressed != null) {
@@ -229,6 +241,7 @@ class _$_DiaryPressed implements _DiaryPressed {
     required TResult Function() toDoPressed,
     required TResult Function() diaryPressed,
     required TResult Function() profilePressed,
+    required TResult Function() newEntryPressed,
   }) {
     return diaryPressed();
   }
@@ -239,6 +252,7 @@ class _$_DiaryPressed implements _DiaryPressed {
     TResult? Function()? toDoPressed,
     TResult? Function()? diaryPressed,
     TResult? Function()? profilePressed,
+    TResult? Function()? newEntryPressed,
   }) {
     return diaryPressed?.call();
   }
@@ -249,6 +263,7 @@ class _$_DiaryPressed implements _DiaryPressed {
     TResult Function()? toDoPressed,
     TResult Function()? diaryPressed,
     TResult Function()? profilePressed,
+    TResult Function()? newEntryPressed,
     required TResult orElse(),
   }) {
     if (diaryPressed != null) {
@@ -263,6 +278,7 @@ class _$_DiaryPressed implements _DiaryPressed {
     required TResult Function(_ToDoPressed value) toDoPressed,
     required TResult Function(_DiaryPressed value) diaryPressed,
     required TResult Function(_ProfilePressed value) profilePressed,
+    required TResult Function(_NewEntryPressed value) newEntryPressed,
   }) {
     return diaryPressed(this);
   }
@@ -273,6 +289,7 @@ class _$_DiaryPressed implements _DiaryPressed {
     TResult? Function(_ToDoPressed value)? toDoPressed,
     TResult? Function(_DiaryPressed value)? diaryPressed,
     TResult? Function(_ProfilePressed value)? profilePressed,
+    TResult? Function(_NewEntryPressed value)? newEntryPressed,
   }) {
     return diaryPressed?.call(this);
   }
@@ -283,6 +300,7 @@ class _$_DiaryPressed implements _DiaryPressed {
     TResult Function(_ToDoPressed value)? toDoPressed,
     TResult Function(_DiaryPressed value)? diaryPressed,
     TResult Function(_ProfilePressed value)? profilePressed,
+    TResult Function(_NewEntryPressed value)? newEntryPressed,
     required TResult orElse(),
   }) {
     if (diaryPressed != null) {
@@ -337,6 +355,7 @@ class _$_ProfilePressed implements _ProfilePressed {
     required TResult Function() toDoPressed,
     required TResult Function() diaryPressed,
     required TResult Function() profilePressed,
+    required TResult Function() newEntryPressed,
   }) {
     return profilePressed();
   }
@@ -347,6 +366,7 @@ class _$_ProfilePressed implements _ProfilePressed {
     TResult? Function()? toDoPressed,
     TResult? Function()? diaryPressed,
     TResult? Function()? profilePressed,
+    TResult? Function()? newEntryPressed,
   }) {
     return profilePressed?.call();
   }
@@ -357,6 +377,7 @@ class _$_ProfilePressed implements _ProfilePressed {
     TResult Function()? toDoPressed,
     TResult Function()? diaryPressed,
     TResult Function()? profilePressed,
+    TResult Function()? newEntryPressed,
     required TResult orElse(),
   }) {
     if (profilePressed != null) {
@@ -371,6 +392,7 @@ class _$_ProfilePressed implements _ProfilePressed {
     required TResult Function(_ToDoPressed value) toDoPressed,
     required TResult Function(_DiaryPressed value) diaryPressed,
     required TResult Function(_ProfilePressed value) profilePressed,
+    required TResult Function(_NewEntryPressed value) newEntryPressed,
   }) {
     return profilePressed(this);
   }
@@ -381,6 +403,7 @@ class _$_ProfilePressed implements _ProfilePressed {
     TResult? Function(_ToDoPressed value)? toDoPressed,
     TResult? Function(_DiaryPressed value)? diaryPressed,
     TResult? Function(_ProfilePressed value)? profilePressed,
+    TResult? Function(_NewEntryPressed value)? newEntryPressed,
   }) {
     return profilePressed?.call(this);
   }
@@ -391,6 +414,7 @@ class _$_ProfilePressed implements _ProfilePressed {
     TResult Function(_ToDoPressed value)? toDoPressed,
     TResult Function(_DiaryPressed value)? diaryPressed,
     TResult Function(_ProfilePressed value)? profilePressed,
+    TResult Function(_NewEntryPressed value)? newEntryPressed,
     required TResult orElse(),
   }) {
     if (profilePressed != null) {
@@ -405,48 +429,168 @@ abstract class _ProfilePressed implements UserDashboardEvent {
 }
 
 /// @nodoc
+abstract class _$$_NewEntryPressedCopyWith<$Res> {
+  factory _$$_NewEntryPressedCopyWith(
+          _$_NewEntryPressed value, $Res Function(_$_NewEntryPressed) then) =
+      __$$_NewEntryPressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_NewEntryPressedCopyWithImpl<$Res>
+    extends _$UserDashboardEventCopyWithImpl<$Res, _$_NewEntryPressed>
+    implements _$$_NewEntryPressedCopyWith<$Res> {
+  __$$_NewEntryPressedCopyWithImpl(
+      _$_NewEntryPressed _value, $Res Function(_$_NewEntryPressed) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_NewEntryPressed implements _NewEntryPressed {
+  const _$_NewEntryPressed();
+
+  @override
+  String toString() {
+    return 'UserDashboardEvent.newEntryPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_NewEntryPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() toDoPressed,
+    required TResult Function() diaryPressed,
+    required TResult Function() profilePressed,
+    required TResult Function() newEntryPressed,
+  }) {
+    return newEntryPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? toDoPressed,
+    TResult? Function()? diaryPressed,
+    TResult? Function()? profilePressed,
+    TResult? Function()? newEntryPressed,
+  }) {
+    return newEntryPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? toDoPressed,
+    TResult Function()? diaryPressed,
+    TResult Function()? profilePressed,
+    TResult Function()? newEntryPressed,
+    required TResult orElse(),
+  }) {
+    if (newEntryPressed != null) {
+      return newEntryPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToDoPressed value) toDoPressed,
+    required TResult Function(_DiaryPressed value) diaryPressed,
+    required TResult Function(_ProfilePressed value) profilePressed,
+    required TResult Function(_NewEntryPressed value) newEntryPressed,
+  }) {
+    return newEntryPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToDoPressed value)? toDoPressed,
+    TResult? Function(_DiaryPressed value)? diaryPressed,
+    TResult? Function(_ProfilePressed value)? profilePressed,
+    TResult? Function(_NewEntryPressed value)? newEntryPressed,
+  }) {
+    return newEntryPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToDoPressed value)? toDoPressed,
+    TResult Function(_DiaryPressed value)? diaryPressed,
+    TResult Function(_ProfilePressed value)? profilePressed,
+    TResult Function(_NewEntryPressed value)? newEntryPressed,
+    required TResult orElse(),
+  }) {
+    if (newEntryPressed != null) {
+      return newEntryPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NewEntryPressed implements UserDashboardEvent {
+  const factory _NewEntryPressed() = _$_NewEntryPressed;
+}
+
+/// @nodoc
 mixin _$UserDashboardState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() profileScreen,
     required TResult Function() toDoScreen,
     required TResult Function() diaryScreen,
+    required TResult Function() profileScreen,
+    required TResult Function() newEntryScreen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? profileScreen,
     TResult? Function()? toDoScreen,
     TResult? Function()? diaryScreen,
+    TResult? Function()? profileScreen,
+    TResult? Function()? newEntryScreen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? profileScreen,
     TResult Function()? toDoScreen,
     TResult Function()? diaryScreen,
+    TResult Function()? profileScreen,
+    TResult Function()? newEntryScreen,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_ProflieScreen value) profileScreen,
     required TResult Function(_ToDoScreen value) toDoScreen,
     required TResult Function(_DiaryScreen value) diaryScreen,
+    required TResult Function(_ProflieScreen value) profileScreen,
+    required TResult Function(_NewEntryScreen value) newEntryScreen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ProflieScreen value)? profileScreen,
     TResult? Function(_ToDoScreen value)? toDoScreen,
     TResult? Function(_DiaryScreen value)? diaryScreen,
+    TResult? Function(_ProflieScreen value)? profileScreen,
+    TResult? Function(_NewEntryScreen value)? newEntryScreen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ProflieScreen value)? profileScreen,
     TResult Function(_ToDoScreen value)? toDoScreen,
     TResult Function(_DiaryScreen value)? diaryScreen,
+    TResult Function(_ProflieScreen value)? profileScreen,
+    TResult Function(_NewEntryScreen value)? newEntryScreen,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -468,114 +612,6 @@ class _$UserDashboardStateCopyWithImpl<$Res, $Val extends UserDashboardState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$_ProflieScreenCopyWith<$Res> {
-  factory _$$_ProflieScreenCopyWith(
-          _$_ProflieScreen value, $Res Function(_$_ProflieScreen) then) =
-      __$$_ProflieScreenCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_ProflieScreenCopyWithImpl<$Res>
-    extends _$UserDashboardStateCopyWithImpl<$Res, _$_ProflieScreen>
-    implements _$$_ProflieScreenCopyWith<$Res> {
-  __$$_ProflieScreenCopyWithImpl(
-      _$_ProflieScreen _value, $Res Function(_$_ProflieScreen) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$_ProflieScreen implements _ProflieScreen {
-  const _$_ProflieScreen();
-
-  @override
-  String toString() {
-    return 'UserDashboardState.profileScreen()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_ProflieScreen);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() profileScreen,
-    required TResult Function() toDoScreen,
-    required TResult Function() diaryScreen,
-  }) {
-    return profileScreen();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? profileScreen,
-    TResult? Function()? toDoScreen,
-    TResult? Function()? diaryScreen,
-  }) {
-    return profileScreen?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? profileScreen,
-    TResult Function()? toDoScreen,
-    TResult Function()? diaryScreen,
-    required TResult orElse(),
-  }) {
-    if (profileScreen != null) {
-      return profileScreen();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_ProflieScreen value) profileScreen,
-    required TResult Function(_ToDoScreen value) toDoScreen,
-    required TResult Function(_DiaryScreen value) diaryScreen,
-  }) {
-    return profileScreen(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ProflieScreen value)? profileScreen,
-    TResult? Function(_ToDoScreen value)? toDoScreen,
-    TResult? Function(_DiaryScreen value)? diaryScreen,
-  }) {
-    return profileScreen?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ProflieScreen value)? profileScreen,
-    TResult Function(_ToDoScreen value)? toDoScreen,
-    TResult Function(_DiaryScreen value)? diaryScreen,
-    required TResult orElse(),
-  }) {
-    if (profileScreen != null) {
-      return profileScreen(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ProflieScreen implements UserDashboardState {
-  const factory _ProflieScreen() = _$_ProflieScreen;
 }
 
 /// @nodoc
@@ -616,9 +652,10 @@ class _$_ToDoScreen implements _ToDoScreen {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() profileScreen,
     required TResult Function() toDoScreen,
     required TResult Function() diaryScreen,
+    required TResult Function() profileScreen,
+    required TResult Function() newEntryScreen,
   }) {
     return toDoScreen();
   }
@@ -626,9 +663,10 @@ class _$_ToDoScreen implements _ToDoScreen {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? profileScreen,
     TResult? Function()? toDoScreen,
     TResult? Function()? diaryScreen,
+    TResult? Function()? profileScreen,
+    TResult? Function()? newEntryScreen,
   }) {
     return toDoScreen?.call();
   }
@@ -636,9 +674,10 @@ class _$_ToDoScreen implements _ToDoScreen {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? profileScreen,
     TResult Function()? toDoScreen,
     TResult Function()? diaryScreen,
+    TResult Function()? profileScreen,
+    TResult Function()? newEntryScreen,
     required TResult orElse(),
   }) {
     if (toDoScreen != null) {
@@ -650,9 +689,10 @@ class _$_ToDoScreen implements _ToDoScreen {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_ProflieScreen value) profileScreen,
     required TResult Function(_ToDoScreen value) toDoScreen,
     required TResult Function(_DiaryScreen value) diaryScreen,
+    required TResult Function(_ProflieScreen value) profileScreen,
+    required TResult Function(_NewEntryScreen value) newEntryScreen,
   }) {
     return toDoScreen(this);
   }
@@ -660,9 +700,10 @@ class _$_ToDoScreen implements _ToDoScreen {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ProflieScreen value)? profileScreen,
     TResult? Function(_ToDoScreen value)? toDoScreen,
     TResult? Function(_DiaryScreen value)? diaryScreen,
+    TResult? Function(_ProflieScreen value)? profileScreen,
+    TResult? Function(_NewEntryScreen value)? newEntryScreen,
   }) {
     return toDoScreen?.call(this);
   }
@@ -670,9 +711,10 @@ class _$_ToDoScreen implements _ToDoScreen {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ProflieScreen value)? profileScreen,
     TResult Function(_ToDoScreen value)? toDoScreen,
     TResult Function(_DiaryScreen value)? diaryScreen,
+    TResult Function(_ProflieScreen value)? profileScreen,
+    TResult Function(_NewEntryScreen value)? newEntryScreen,
     required TResult orElse(),
   }) {
     if (toDoScreen != null) {
@@ -724,9 +766,10 @@ class _$_DiaryScreen implements _DiaryScreen {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() profileScreen,
     required TResult Function() toDoScreen,
     required TResult Function() diaryScreen,
+    required TResult Function() profileScreen,
+    required TResult Function() newEntryScreen,
   }) {
     return diaryScreen();
   }
@@ -734,9 +777,10 @@ class _$_DiaryScreen implements _DiaryScreen {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? profileScreen,
     TResult? Function()? toDoScreen,
     TResult? Function()? diaryScreen,
+    TResult? Function()? profileScreen,
+    TResult? Function()? newEntryScreen,
   }) {
     return diaryScreen?.call();
   }
@@ -744,9 +788,10 @@ class _$_DiaryScreen implements _DiaryScreen {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? profileScreen,
     TResult Function()? toDoScreen,
     TResult Function()? diaryScreen,
+    TResult Function()? profileScreen,
+    TResult Function()? newEntryScreen,
     required TResult orElse(),
   }) {
     if (diaryScreen != null) {
@@ -758,9 +803,10 @@ class _$_DiaryScreen implements _DiaryScreen {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_ProflieScreen value) profileScreen,
     required TResult Function(_ToDoScreen value) toDoScreen,
     required TResult Function(_DiaryScreen value) diaryScreen,
+    required TResult Function(_ProflieScreen value) profileScreen,
+    required TResult Function(_NewEntryScreen value) newEntryScreen,
   }) {
     return diaryScreen(this);
   }
@@ -768,9 +814,10 @@ class _$_DiaryScreen implements _DiaryScreen {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ProflieScreen value)? profileScreen,
     TResult? Function(_ToDoScreen value)? toDoScreen,
     TResult? Function(_DiaryScreen value)? diaryScreen,
+    TResult? Function(_ProflieScreen value)? profileScreen,
+    TResult? Function(_NewEntryScreen value)? newEntryScreen,
   }) {
     return diaryScreen?.call(this);
   }
@@ -778,9 +825,10 @@ class _$_DiaryScreen implements _DiaryScreen {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ProflieScreen value)? profileScreen,
     TResult Function(_ToDoScreen value)? toDoScreen,
     TResult Function(_DiaryScreen value)? diaryScreen,
+    TResult Function(_ProflieScreen value)? profileScreen,
+    TResult Function(_NewEntryScreen value)? newEntryScreen,
     required TResult orElse(),
   }) {
     if (diaryScreen != null) {
@@ -792,4 +840,232 @@ class _$_DiaryScreen implements _DiaryScreen {
 
 abstract class _DiaryScreen implements UserDashboardState {
   const factory _DiaryScreen() = _$_DiaryScreen;
+}
+
+/// @nodoc
+abstract class _$$_ProflieScreenCopyWith<$Res> {
+  factory _$$_ProflieScreenCopyWith(
+          _$_ProflieScreen value, $Res Function(_$_ProflieScreen) then) =
+      __$$_ProflieScreenCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_ProflieScreenCopyWithImpl<$Res>
+    extends _$UserDashboardStateCopyWithImpl<$Res, _$_ProflieScreen>
+    implements _$$_ProflieScreenCopyWith<$Res> {
+  __$$_ProflieScreenCopyWithImpl(
+      _$_ProflieScreen _value, $Res Function(_$_ProflieScreen) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_ProflieScreen implements _ProflieScreen {
+  const _$_ProflieScreen();
+
+  @override
+  String toString() {
+    return 'UserDashboardState.profileScreen()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_ProflieScreen);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() toDoScreen,
+    required TResult Function() diaryScreen,
+    required TResult Function() profileScreen,
+    required TResult Function() newEntryScreen,
+  }) {
+    return profileScreen();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? toDoScreen,
+    TResult? Function()? diaryScreen,
+    TResult? Function()? profileScreen,
+    TResult? Function()? newEntryScreen,
+  }) {
+    return profileScreen?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? toDoScreen,
+    TResult Function()? diaryScreen,
+    TResult Function()? profileScreen,
+    TResult Function()? newEntryScreen,
+    required TResult orElse(),
+  }) {
+    if (profileScreen != null) {
+      return profileScreen();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToDoScreen value) toDoScreen,
+    required TResult Function(_DiaryScreen value) diaryScreen,
+    required TResult Function(_ProflieScreen value) profileScreen,
+    required TResult Function(_NewEntryScreen value) newEntryScreen,
+  }) {
+    return profileScreen(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToDoScreen value)? toDoScreen,
+    TResult? Function(_DiaryScreen value)? diaryScreen,
+    TResult? Function(_ProflieScreen value)? profileScreen,
+    TResult? Function(_NewEntryScreen value)? newEntryScreen,
+  }) {
+    return profileScreen?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToDoScreen value)? toDoScreen,
+    TResult Function(_DiaryScreen value)? diaryScreen,
+    TResult Function(_ProflieScreen value)? profileScreen,
+    TResult Function(_NewEntryScreen value)? newEntryScreen,
+    required TResult orElse(),
+  }) {
+    if (profileScreen != null) {
+      return profileScreen(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ProflieScreen implements UserDashboardState {
+  const factory _ProflieScreen() = _$_ProflieScreen;
+}
+
+/// @nodoc
+abstract class _$$_NewEntryScreenCopyWith<$Res> {
+  factory _$$_NewEntryScreenCopyWith(
+          _$_NewEntryScreen value, $Res Function(_$_NewEntryScreen) then) =
+      __$$_NewEntryScreenCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_NewEntryScreenCopyWithImpl<$Res>
+    extends _$UserDashboardStateCopyWithImpl<$Res, _$_NewEntryScreen>
+    implements _$$_NewEntryScreenCopyWith<$Res> {
+  __$$_NewEntryScreenCopyWithImpl(
+      _$_NewEntryScreen _value, $Res Function(_$_NewEntryScreen) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_NewEntryScreen implements _NewEntryScreen {
+  const _$_NewEntryScreen();
+
+  @override
+  String toString() {
+    return 'UserDashboardState.newEntryScreen()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_NewEntryScreen);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() toDoScreen,
+    required TResult Function() diaryScreen,
+    required TResult Function() profileScreen,
+    required TResult Function() newEntryScreen,
+  }) {
+    return newEntryScreen();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? toDoScreen,
+    TResult? Function()? diaryScreen,
+    TResult? Function()? profileScreen,
+    TResult? Function()? newEntryScreen,
+  }) {
+    return newEntryScreen?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? toDoScreen,
+    TResult Function()? diaryScreen,
+    TResult Function()? profileScreen,
+    TResult Function()? newEntryScreen,
+    required TResult orElse(),
+  }) {
+    if (newEntryScreen != null) {
+      return newEntryScreen();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToDoScreen value) toDoScreen,
+    required TResult Function(_DiaryScreen value) diaryScreen,
+    required TResult Function(_ProflieScreen value) profileScreen,
+    required TResult Function(_NewEntryScreen value) newEntryScreen,
+  }) {
+    return newEntryScreen(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToDoScreen value)? toDoScreen,
+    TResult? Function(_DiaryScreen value)? diaryScreen,
+    TResult? Function(_ProflieScreen value)? profileScreen,
+    TResult? Function(_NewEntryScreen value)? newEntryScreen,
+  }) {
+    return newEntryScreen?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToDoScreen value)? toDoScreen,
+    TResult Function(_DiaryScreen value)? diaryScreen,
+    TResult Function(_ProflieScreen value)? profileScreen,
+    TResult Function(_NewEntryScreen value)? newEntryScreen,
+    required TResult orElse(),
+  }) {
+    if (newEntryScreen != null) {
+      return newEntryScreen(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NewEntryScreen implements UserDashboardState {
+  const factory _NewEntryScreen() = _$_NewEntryScreen;
 }

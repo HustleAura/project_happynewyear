@@ -26,6 +26,11 @@ class UserDashboardBloc extends Bloc<UserDashboardEvent, UserDashboardState> {
             const UserDashboardState.profileScreen(),
           );
         },
+        newEntryPressed: (newEntryPressed) {
+          emit(
+            const UserDashboardState.newEntryScreen(),
+          );
+        },
       );
     });
   }

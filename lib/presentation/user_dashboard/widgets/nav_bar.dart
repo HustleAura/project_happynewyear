@@ -16,9 +16,9 @@ class NavBar extends StatelessWidget {
       color: backGroundColor,
       child: BlocBuilder<UserDashboardBloc, UserDashboardState>(
         builder: (context, state) {
-          if (state == const UserDashboardState.diaryScreen()) {
+          if (state == const UserDashboardState.toDoScreen()) {
             return const StaticNavBar(
-              activeList: [true, false, false],
+              activeList: [false, true, false],
             );
           } else if (state == const UserDashboardState.profileScreen()) {
             return const StaticNavBar(
@@ -26,7 +26,7 @@ class NavBar extends StatelessWidget {
             );
           } else {
             return const StaticNavBar(
-              activeList: [false, true, false],
+              activeList: [true, false, false],
             );
           }
         },

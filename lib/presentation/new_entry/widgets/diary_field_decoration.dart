@@ -13,12 +13,12 @@ class DiaryFieldDecoration extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(
-        vertical: 10,
-        horizontal: 20,
+        vertical: 5,
+        horizontal: 10,
       ),
       margin: const EdgeInsets.symmetric(
-        vertical: 10,
-        horizontal: 20,
+        vertical: 5,
+        horizontal: 10,
       ),
       decoration: BoxDecoration(
         // color: tileColor,
