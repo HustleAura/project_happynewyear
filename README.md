@@ -1,4 +1,4 @@
-# LifeBook
+# My LifeBook
 
 <div style="display:flex">
 <img src="assets/screenshots/auth_screen.jpeg" alt="auth screen" height="500px" width="250px" display="inline">
