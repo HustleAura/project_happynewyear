@@ -9,9 +9,13 @@ Either<ValueFailure<DateTime>, DateTime> transformedDateTime(DateTime date) {
 // test this function, may be prone to bugs
 Either<ValueFailure<DateTime>, DateTime> validatedDatefromString(
     String dateString) {
-  final formattedString = dateString.split('/').reversed.join();
-  print(
-      'inside the date transformer and the value of the formatted string is $formattedString');
+  final formattedStringList = dateString.split('/').reversed;
+
+  String formattedString = '';
+  for (var string in formattedStringList) {
+    formattedString += string.padLeft(2, '0');
+  }
+
   if (DateTime.tryParse(formattedString) == null) {
     return left(
       const InvalidDate(),
@@ -19,7 +23,7 @@ Either<ValueFailure<DateTime>, DateTime> validatedDatefromString(
   } else {
     return right(
       DateTime.parse(
-        dateString,
+        formattedString,
       ),
     );
   }
