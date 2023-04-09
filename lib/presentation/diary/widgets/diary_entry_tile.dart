@@ -51,7 +51,7 @@ class InsideDiaryEntryTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            '01/01/2023',
+            diaryEntry.diaryDate.toString(),
             style: GoogleFonts.poppins(
               fontSize: 15,
               color: backGroundColor,
@@ -61,7 +61,7 @@ class InsideDiaryEntryTile extends StatelessWidget {
             height: 5,
           ),
           Text(
-            'diaryEntry.diaryTitle',
+            diaryEntry.diaryTitle.getOrCrash,
             style: GoogleFonts.poppins(
               fontSize: 20,
               color: whiteColor,
