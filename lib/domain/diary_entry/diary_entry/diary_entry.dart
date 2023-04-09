@@ -12,6 +12,7 @@ abstract class DiaryEntry with _$DiaryEntry {
     required DiaryDate diaryDate,
     required DiaryTitle diaryTitle,
     required DiaryBody diaryBody,
+    // required FieldServerTimeStamp
   }) = _DiaryEntry;
 
   factory DiaryEntry.newEntry({
