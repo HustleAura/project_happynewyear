@@ -6,7 +6,7 @@ import 'diary_field_decoration.dart';
 
 class TitleField extends StatelessWidget {
   final TextEditingController controller;
-  TitleField({
+  const TitleField({
     super.key,
     required this.controller,
   });

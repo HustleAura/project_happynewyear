@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_happynewyear/presentation/core/constants.dart';
+import 'package:project_happynewyear/presentation/create_and_update_entry/create_entry.dart';
 
 import '../../../domain/diary_entry/diary_entry/diary_entry.dart';
 
@@ -13,20 +14,29 @@ class DiaryEntryTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: fullScreenWidth * 0.8,
-      height: fullScreenHeight * 0.1,
-      margin: const EdgeInsets.fromLTRB(25, 0, 25, 20),
-      padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
-      decoration: const BoxDecoration(
-        color: foreGroundColor,
-        borderRadius: BorderRadius.all(
-          Radius.circular(15),
+    return GestureDetector(
+      child: Container(
+        width: fullScreenWidth * 0.8,
+        height: fullScreenHeight * 0.1,
+        margin: const EdgeInsets.fromLTRB(25, 0, 25, 20),
+        padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+        decoration: const BoxDecoration(
+          color: foreGroundColor,
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
+          ),
+        ),
+        child: InsideDiaryEntryTile(
+          diaryEntry: diaryEntry,
         ),
       ),
-      child: InsideDiaryEntryTile(
-        diaryEntry: diaryEntry,
-      ),
+      onTap: () {
+        Navigator.pushNamed(
+          context,
+          routeUpdateEntryPage,
+          arguments: diaryEntry,
+        );
+      },
     );
   }
 }

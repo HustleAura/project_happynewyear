@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_happynewyear/presentation/core/constants.dart';
-import 'package:project_happynewyear/presentation/new_entry/new_entry_page.dart';
+import 'package:project_happynewyear/presentation/create_and_update_entry/create_entry.dart';
 
 import '../profile/profile_page.dart';
 import 'widgets/nav_bar.dart';

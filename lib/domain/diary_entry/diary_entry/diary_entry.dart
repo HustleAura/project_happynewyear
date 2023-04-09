@@ -14,13 +14,26 @@ abstract class DiaryEntry with _$DiaryEntry {
     required DiaryBody diaryBody,
   }) = _DiaryEntry;
 
-  factory DiaryEntry.newEntry(
-    String title,
-    String body,
-  ) {
+  factory DiaryEntry.newEntry({
+    required String title,
+    required String body,
+  }) {
     return DiaryEntry(
       uniqueId: UniqueId.newId(),
       diaryDate: DiaryDate.today(),
+      diaryTitle: DiaryTitle(title),
+      diaryBody: DiaryBody(body),
+    );
+  }
+
+  factory DiaryEntry.updatedDiaryEntry({
+    required String title,
+    required String body,
+    required DiaryEntry diaryEntry,
+  }) {
+    return DiaryEntry(
+      uniqueId: diaryEntry.uniqueId,
+      diaryDate: diaryEntry.diaryDate,
       diaryTitle: DiaryTitle(title),
       diaryBody: DiaryBody(body),
     );

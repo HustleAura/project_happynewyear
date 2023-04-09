@@ -21,3 +21,4 @@ final fullScreenHeight = fullScreenSize.height;
 const routeHomePage = '/homepage';
 const routeAuthPage = '/authpage';
 const routeNewEntryPage = '/newentrypage';
+const routeUpdateEntryPage = '/updateentrypage';

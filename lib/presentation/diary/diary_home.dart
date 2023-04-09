@@ -33,9 +33,7 @@ class DiaryHome extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {
-                    BlocProvider.of<UserDashboardBloc>(context).add(
-                      const UserDashboardEvent.newEntryPressed(),
-                    );
+                    Navigator.pushNamed(context, routeNewEntryPage);
                   },
                   icon: const Icon(
                     Icons.add_circle_outline,

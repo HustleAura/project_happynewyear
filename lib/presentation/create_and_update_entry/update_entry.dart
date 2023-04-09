@@ -8,10 +8,19 @@ import '../core/constants.dart';
 import 'widgets/body_field.dart';
 import 'widgets/title_field.dart';
 
-class NewEntryPage extends StatelessWidget {
-  final titleController = TextEditingController();
-  final bodyController = TextEditingController();
-  NewEntryPage({super.key});
+class UpdateEntryPage extends StatelessWidget {
+  final DiaryEntry diaryEntry;
+  late TextEditingController bodyController;
+  late TextEditingController titleController;
+  UpdateEntryPage({
+    super.key,
+    required this.diaryEntry,
+  }) {
+    bodyController =
+        TextEditingController(text: diaryEntry.diaryBody.getOrCrash);
+    titleController =
+        TextEditingController(text: diaryEntry.diaryTitle.getOrCrash);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,14 +53,19 @@ class NewEntryPage extends StatelessWidget {
                 child: TextButton(
                   onPressed: () {
                     BlocProvider.of<DiaryUiBloc>(context).add(
-                      DiaryUiEvent.createEntry(DiaryEntry.newEntry(
-                        titleController.text,
-                        bodyController.text,
-                      )),
+                      DiaryUiEvent.updateEntry(
+                        DiaryEntry.updatedDiaryEntry(
+                          body: bodyController.text,
+                          diaryEntry: diaryEntry,
+                          title: titleController.text,
+                        ),
+                      ),
                     );
+
+                    Navigator.pop(context);
                   },
                   child: Text(
-                    'done!',
+                    'Update!',
                     style: GoogleFonts.poppins(
                       color: foreGroundColor,
                       fontSize: 25,
