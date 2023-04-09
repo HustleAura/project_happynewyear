@@ -1,16 +1,5 @@
-# project_happynewyear
+# LifeBook
 
-A new Flutter project.
+Well, umm okay. Here's a bit of a personal question. How often do you feel the urge to just open yourselves up infront of someone? We don't know about you but we certainly do. But ofcourse, this liberty comes with a lot of problems and therefore writing down somewhere all that random thoughts helps a lot(source : Trust Me Bro). So here is a gift from us if you relate👉👈. Happy writing. 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+PS - Feel free to complain anything about the app you don't like in the issues. We will be happy to try and fix them.
