@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project_happynewyear/presentation/auth/sign_in_page.dart';
-import 'package:project_happynewyear/presentation/diary_entry/diary_entry_page.dart';
-import 'package:project_happynewyear/presentation/home/home_page.dart';
+import 'package:project_happynewyear/presentation/auth/auth_page.dart';
+import 'package:project_happynewyear/presentation/new_entry/new_entry_page.dart';
+import 'package:project_happynewyear/presentation/user_dashboard/user_dashboard.dart';
 
 import '../constants.dart';
 
@@ -11,19 +11,19 @@ class Routes {
     switch (routeSettings.name) {
       case routeHomePage:
         return MaterialPageRoute(
-          builder: (_) => const HomePage(),
+          builder: (_) => const UserDashboard(),
         );
       case routeAuthPage:
         return MaterialPageRoute(
-          builder: (_) => const SignInPage(),
+          builder: (_) => const AuthPage(),
         );
       case routeNewEntryPage:
         return MaterialPageRoute(
-          builder: (_) => const DiaryEntryPage(),
+          builder: (_) => NewEntryPage(),
         );
       default:
         return MaterialPageRoute(
-          builder: (_) => const SignInPage(),
+          builder: (_) => const AuthPage(),
         );
     }
   }

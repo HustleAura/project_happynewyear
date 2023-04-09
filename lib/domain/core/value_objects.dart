@@ -28,7 +28,7 @@ class UniqueId extends ValueObjects<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-  factory UniqueId() {
+  factory UniqueId.newId() {
     return UniqueId._(
       right(const Uuid().v1()),
     );
