@@ -39,7 +39,7 @@ class UserDashboard extends StatelessWidget {
                 } else {
                   return Container(
                     color: whiteColor,
-                    child: const NewEntryPage(),
+                    child: NewEntryPage(),
                   );
                 }
               },

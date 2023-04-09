@@ -8,7 +8,7 @@ part 'user_dashboard_bloc.freezed.dart';
 
 @injectable
 class UserDashboardBloc extends Bloc<UserDashboardEvent, UserDashboardState> {
-  UserDashboardBloc() : super(const _ProflieScreen()) {
+  UserDashboardBloc() : super(const _DiaryScreen()) {
     on<UserDashboardEvent>((event, emit) {
       event.map(
         toDoPressed: (toDoPressed) {

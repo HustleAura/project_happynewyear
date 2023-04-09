@@ -235,7 +235,6 @@ abstract class _ShowAllEntries implements DiaryWatcherEvent {
 mixin _$DiaryWatcherState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<DiaryEntry> allEntriesList) fetchSuccess,
     required TResult Function(DiaryFailure diaryFailure) fetchFailure,
@@ -243,7 +242,6 @@ mixin _$DiaryWatcherState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<DiaryEntry> allEntriesList)? fetchSuccess,
     TResult? Function(DiaryFailure diaryFailure)? fetchFailure,
@@ -251,7 +249,6 @@ mixin _$DiaryWatcherState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<DiaryEntry> allEntriesList)? fetchSuccess,
     TResult Function(DiaryFailure diaryFailure)? fetchFailure,
@@ -260,26 +257,23 @@ mixin _$DiaryWatcherState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_FetchSuccess value) fetchSuccess,
-    required TResult Function(_FetchFailure value) fetchFailure,
+    required TResult Function(Loading value) loading,
+    required TResult Function(FetchSuccess value) fetchSuccess,
+    required TResult Function(FetchFailure value) fetchFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_FetchSuccess value)? fetchSuccess,
-    TResult? Function(_FetchFailure value)? fetchFailure,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(FetchSuccess value)? fetchSuccess,
+    TResult? Function(FetchFailure value)? fetchFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_FetchSuccess value)? fetchSuccess,
-    TResult Function(_FetchFailure value)? fetchFailure,
+    TResult Function(Loading value)? loading,
+    TResult Function(FetchSuccess value)? fetchSuccess,
+    TResult Function(FetchFailure value)? fetchFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -304,137 +298,23 @@ class _$DiaryWatcherStateCopyWithImpl<$Res, $Val extends DiaryWatcherState>
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
+abstract class _$$LoadingCopyWith<$Res> {
+  factory _$$LoadingCopyWith(_$Loading value, $Res Function(_$Loading) then) =
+      __$$LoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitialCopyWithImpl<$Res>
-    extends _$DiaryWatcherStateCopyWithImpl<$Res, _$_Initial>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+class __$$LoadingCopyWithImpl<$Res>
+    extends _$DiaryWatcherStateCopyWithImpl<$Res, _$Loading>
+    implements _$$LoadingCopyWith<$Res> {
+  __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
-
-  @override
-  String toString() {
-    return 'DiaryWatcherState.initial()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<DiaryEntry> allEntriesList) fetchSuccess,
-    required TResult Function(DiaryFailure diaryFailure) fetchFailure,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<DiaryEntry> allEntriesList)? fetchSuccess,
-    TResult? Function(DiaryFailure diaryFailure)? fetchFailure,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<DiaryEntry> allEntriesList)? fetchSuccess,
-    TResult Function(DiaryFailure diaryFailure)? fetchFailure,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_FetchSuccess value) fetchSuccess,
-    required TResult Function(_FetchFailure value) fetchFailure,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_FetchSuccess value)? fetchSuccess,
-    TResult? Function(_FetchFailure value)? fetchFailure,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_FetchSuccess value)? fetchSuccess,
-    TResult Function(_FetchFailure value)? fetchFailure,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements DiaryWatcherState {
-  const factory _Initial() = _$_Initial;
-}
-
-/// @nodoc
-abstract class _$$_LoadingCopyWith<$Res> {
-  factory _$$_LoadingCopyWith(
-          _$_Loading value, $Res Function(_$_Loading) then) =
-      __$$_LoadingCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_LoadingCopyWithImpl<$Res>
-    extends _$DiaryWatcherStateCopyWithImpl<$Res, _$_Loading>
-    implements _$$_LoadingCopyWith<$Res> {
-  __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$_Loading implements _Loading {
-  const _$_Loading();
+class _$Loading implements Loading {
+  const _$Loading();
 
   @override
   String toString() {
@@ -444,7 +324,7 @@ class _$_Loading implements _Loading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Loading);
+        (other.runtimeType == runtimeType && other is _$Loading);
   }
 
   @override
@@ -453,7 +333,6 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<DiaryEntry> allEntriesList) fetchSuccess,
     required TResult Function(DiaryFailure diaryFailure) fetchFailure,
@@ -464,7 +343,6 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<DiaryEntry> allEntriesList)? fetchSuccess,
     TResult? Function(DiaryFailure diaryFailure)? fetchFailure,
@@ -475,7 +353,6 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<DiaryEntry> allEntriesList)? fetchSuccess,
     TResult Function(DiaryFailure diaryFailure)? fetchFailure,
@@ -490,10 +367,9 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_FetchSuccess value) fetchSuccess,
-    required TResult Function(_FetchFailure value) fetchFailure,
+    required TResult Function(Loading value) loading,
+    required TResult Function(FetchSuccess value) fetchSuccess,
+    required TResult Function(FetchFailure value) fetchFailure,
   }) {
     return loading(this);
   }
@@ -501,10 +377,9 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_FetchSuccess value)? fetchSuccess,
-    TResult? Function(_FetchFailure value)? fetchFailure,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(FetchSuccess value)? fetchSuccess,
+    TResult? Function(FetchFailure value)? fetchFailure,
   }) {
     return loading?.call(this);
   }
@@ -512,10 +387,9 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_FetchSuccess value)? fetchSuccess,
-    TResult Function(_FetchFailure value)? fetchFailure,
+    TResult Function(Loading value)? loading,
+    TResult Function(FetchSuccess value)? fetchSuccess,
+    TResult Function(FetchFailure value)? fetchFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -525,25 +399,25 @@ class _$_Loading implements _Loading {
   }
 }
 
-abstract class _Loading implements DiaryWatcherState {
-  const factory _Loading() = _$_Loading;
+abstract class Loading implements DiaryWatcherState {
+  const factory Loading() = _$Loading;
 }
 
 /// @nodoc
-abstract class _$$_FetchSuccessCopyWith<$Res> {
-  factory _$$_FetchSuccessCopyWith(
-          _$_FetchSuccess value, $Res Function(_$_FetchSuccess) then) =
-      __$$_FetchSuccessCopyWithImpl<$Res>;
+abstract class _$$FetchSuccessCopyWith<$Res> {
+  factory _$$FetchSuccessCopyWith(
+          _$FetchSuccess value, $Res Function(_$FetchSuccess) then) =
+      __$$FetchSuccessCopyWithImpl<$Res>;
   @useResult
   $Res call({List<DiaryEntry> allEntriesList});
 }
 
 /// @nodoc
-class __$$_FetchSuccessCopyWithImpl<$Res>
-    extends _$DiaryWatcherStateCopyWithImpl<$Res, _$_FetchSuccess>
-    implements _$$_FetchSuccessCopyWith<$Res> {
-  __$$_FetchSuccessCopyWithImpl(
-      _$_FetchSuccess _value, $Res Function(_$_FetchSuccess) _then)
+class __$$FetchSuccessCopyWithImpl<$Res>
+    extends _$DiaryWatcherStateCopyWithImpl<$Res, _$FetchSuccess>
+    implements _$$FetchSuccessCopyWith<$Res> {
+  __$$FetchSuccessCopyWithImpl(
+      _$FetchSuccess _value, $Res Function(_$FetchSuccess) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -551,7 +425,7 @@ class __$$_FetchSuccessCopyWithImpl<$Res>
   $Res call({
     Object? allEntriesList = null,
   }) {
-    return _then(_$_FetchSuccess(
+    return _then(_$FetchSuccess(
       null == allEntriesList
           ? _value._allEntriesList
           : allEntriesList // ignore: cast_nullable_to_non_nullable
@@ -562,8 +436,8 @@ class __$$_FetchSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FetchSuccess implements _FetchSuccess {
-  const _$_FetchSuccess(final List<DiaryEntry> allEntriesList)
+class _$FetchSuccess implements FetchSuccess {
+  const _$FetchSuccess(final List<DiaryEntry> allEntriesList)
       : _allEntriesList = allEntriesList;
 
   final List<DiaryEntry> _allEntriesList;
@@ -583,7 +457,7 @@ class _$_FetchSuccess implements _FetchSuccess {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FetchSuccess &&
+            other is _$FetchSuccess &&
             const DeepCollectionEquality()
                 .equals(other._allEntriesList, _allEntriesList));
   }
@@ -595,13 +469,12 @@ class _$_FetchSuccess implements _FetchSuccess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FetchSuccessCopyWith<_$_FetchSuccess> get copyWith =>
-      __$$_FetchSuccessCopyWithImpl<_$_FetchSuccess>(this, _$identity);
+  _$$FetchSuccessCopyWith<_$FetchSuccess> get copyWith =>
+      __$$FetchSuccessCopyWithImpl<_$FetchSuccess>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<DiaryEntry> allEntriesList) fetchSuccess,
     required TResult Function(DiaryFailure diaryFailure) fetchFailure,
@@ -612,7 +485,6 @@ class _$_FetchSuccess implements _FetchSuccess {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<DiaryEntry> allEntriesList)? fetchSuccess,
     TResult? Function(DiaryFailure diaryFailure)? fetchFailure,
@@ -623,7 +495,6 @@ class _$_FetchSuccess implements _FetchSuccess {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<DiaryEntry> allEntriesList)? fetchSuccess,
     TResult Function(DiaryFailure diaryFailure)? fetchFailure,
@@ -638,10 +509,9 @@ class _$_FetchSuccess implements _FetchSuccess {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_FetchSuccess value) fetchSuccess,
-    required TResult Function(_FetchFailure value) fetchFailure,
+    required TResult Function(Loading value) loading,
+    required TResult Function(FetchSuccess value) fetchSuccess,
+    required TResult Function(FetchFailure value) fetchFailure,
   }) {
     return fetchSuccess(this);
   }
@@ -649,10 +519,9 @@ class _$_FetchSuccess implements _FetchSuccess {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_FetchSuccess value)? fetchSuccess,
-    TResult? Function(_FetchFailure value)? fetchFailure,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(FetchSuccess value)? fetchSuccess,
+    TResult? Function(FetchFailure value)? fetchFailure,
   }) {
     return fetchSuccess?.call(this);
   }
@@ -660,10 +529,9 @@ class _$_FetchSuccess implements _FetchSuccess {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_FetchSuccess value)? fetchSuccess,
-    TResult Function(_FetchFailure value)? fetchFailure,
+    TResult Function(Loading value)? loading,
+    TResult Function(FetchSuccess value)? fetchSuccess,
+    TResult Function(FetchFailure value)? fetchFailure,
     required TResult orElse(),
   }) {
     if (fetchSuccess != null) {
@@ -673,21 +541,21 @@ class _$_FetchSuccess implements _FetchSuccess {
   }
 }
 
-abstract class _FetchSuccess implements DiaryWatcherState {
-  const factory _FetchSuccess(final List<DiaryEntry> allEntriesList) =
-      _$_FetchSuccess;
+abstract class FetchSuccess implements DiaryWatcherState {
+  const factory FetchSuccess(final List<DiaryEntry> allEntriesList) =
+      _$FetchSuccess;
 
   List<DiaryEntry> get allEntriesList;
   @JsonKey(ignore: true)
-  _$$_FetchSuccessCopyWith<_$_FetchSuccess> get copyWith =>
+  _$$FetchSuccessCopyWith<_$FetchSuccess> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FetchFailureCopyWith<$Res> {
-  factory _$$_FetchFailureCopyWith(
-          _$_FetchFailure value, $Res Function(_$_FetchFailure) then) =
-      __$$_FetchFailureCopyWithImpl<$Res>;
+abstract class _$$FetchFailureCopyWith<$Res> {
+  factory _$$FetchFailureCopyWith(
+          _$FetchFailure value, $Res Function(_$FetchFailure) then) =
+      __$$FetchFailureCopyWithImpl<$Res>;
   @useResult
   $Res call({DiaryFailure diaryFailure});
 
@@ -695,11 +563,11 @@ abstract class _$$_FetchFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_FetchFailureCopyWithImpl<$Res>
-    extends _$DiaryWatcherStateCopyWithImpl<$Res, _$_FetchFailure>
-    implements _$$_FetchFailureCopyWith<$Res> {
-  __$$_FetchFailureCopyWithImpl(
-      _$_FetchFailure _value, $Res Function(_$_FetchFailure) _then)
+class __$$FetchFailureCopyWithImpl<$Res>
+    extends _$DiaryWatcherStateCopyWithImpl<$Res, _$FetchFailure>
+    implements _$$FetchFailureCopyWith<$Res> {
+  __$$FetchFailureCopyWithImpl(
+      _$FetchFailure _value, $Res Function(_$FetchFailure) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -707,7 +575,7 @@ class __$$_FetchFailureCopyWithImpl<$Res>
   $Res call({
     Object? diaryFailure = null,
   }) {
-    return _then(_$_FetchFailure(
+    return _then(_$FetchFailure(
       null == diaryFailure
           ? _value.diaryFailure
           : diaryFailure // ignore: cast_nullable_to_non_nullable
@@ -726,8 +594,8 @@ class __$$_FetchFailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FetchFailure implements _FetchFailure {
-  const _$_FetchFailure(this.diaryFailure);
+class _$FetchFailure implements FetchFailure {
+  const _$FetchFailure(this.diaryFailure);
 
   @override
   final DiaryFailure diaryFailure;
@@ -741,7 +609,7 @@ class _$_FetchFailure implements _FetchFailure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FetchFailure &&
+            other is _$FetchFailure &&
             (identical(other.diaryFailure, diaryFailure) ||
                 other.diaryFailure == diaryFailure));
   }
@@ -752,13 +620,12 @@ class _$_FetchFailure implements _FetchFailure {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FetchFailureCopyWith<_$_FetchFailure> get copyWith =>
-      __$$_FetchFailureCopyWithImpl<_$_FetchFailure>(this, _$identity);
+  _$$FetchFailureCopyWith<_$FetchFailure> get copyWith =>
+      __$$FetchFailureCopyWithImpl<_$FetchFailure>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<DiaryEntry> allEntriesList) fetchSuccess,
     required TResult Function(DiaryFailure diaryFailure) fetchFailure,
@@ -769,7 +636,6 @@ class _$_FetchFailure implements _FetchFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<DiaryEntry> allEntriesList)? fetchSuccess,
     TResult? Function(DiaryFailure diaryFailure)? fetchFailure,
@@ -780,7 +646,6 @@ class _$_FetchFailure implements _FetchFailure {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<DiaryEntry> allEntriesList)? fetchSuccess,
     TResult Function(DiaryFailure diaryFailure)? fetchFailure,
@@ -795,10 +660,9 @@ class _$_FetchFailure implements _FetchFailure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_FetchSuccess value) fetchSuccess,
-    required TResult Function(_FetchFailure value) fetchFailure,
+    required TResult Function(Loading value) loading,
+    required TResult Function(FetchSuccess value) fetchSuccess,
+    required TResult Function(FetchFailure value) fetchFailure,
   }) {
     return fetchFailure(this);
   }
@@ -806,10 +670,9 @@ class _$_FetchFailure implements _FetchFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_FetchSuccess value)? fetchSuccess,
-    TResult? Function(_FetchFailure value)? fetchFailure,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(FetchSuccess value)? fetchSuccess,
+    TResult? Function(FetchFailure value)? fetchFailure,
   }) {
     return fetchFailure?.call(this);
   }
@@ -817,10 +680,9 @@ class _$_FetchFailure implements _FetchFailure {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_FetchSuccess value)? fetchSuccess,
-    TResult Function(_FetchFailure value)? fetchFailure,
+    TResult Function(Loading value)? loading,
+    TResult Function(FetchSuccess value)? fetchSuccess,
+    TResult Function(FetchFailure value)? fetchFailure,
     required TResult orElse(),
   }) {
     if (fetchFailure != null) {
@@ -830,12 +692,11 @@ class _$_FetchFailure implements _FetchFailure {
   }
 }
 
-abstract class _FetchFailure implements DiaryWatcherState {
-  const factory _FetchFailure(final DiaryFailure diaryFailure) =
-      _$_FetchFailure;
+abstract class FetchFailure implements DiaryWatcherState {
+  const factory FetchFailure(final DiaryFailure diaryFailure) = _$FetchFailure;
 
   DiaryFailure get diaryFailure;
   @JsonKey(ignore: true)
-  _$$_FetchFailureCopyWith<_$_FetchFailure> get copyWith =>
+  _$$FetchFailureCopyWith<_$FetchFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -19,7 +19,7 @@ class Routes {
         );
       case routeNewEntryPage:
         return MaterialPageRoute(
-          builder: (_) => const NewEntryPage(),
+          builder: (_) => NewEntryPage(),
         );
       default:
         return MaterialPageRoute(

@@ -5,7 +5,15 @@ import '../../core/constants.dart';
 import 'diary_field_decoration.dart';
 
 class BodyField extends StatelessWidget {
-  const BodyField({super.key});
+  final TextEditingController controller;
+  BodyField({
+    super.key,
+    required this.controller,
+  });
+
+  String getValue() {
+    return controller.text;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +40,7 @@ class BodyField extends StatelessWidget {
             ),
           ),
           style: GoogleFonts.poppins(),
+          controller: controller,
         ),
       ),
     );

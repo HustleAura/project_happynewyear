@@ -14,12 +14,15 @@ abstract class DiaryEntry with _$DiaryEntry {
     required DiaryBody diaryBody,
   }) = _DiaryEntry;
 
-  factory DiaryEntry.newEntry() {
+  factory DiaryEntry.newEntry(
+    String title,
+    String body,
+  ) {
     return DiaryEntry(
-      uniqueId: UniqueId(),
+      uniqueId: UniqueId.newId(),
       diaryDate: DiaryDate.today(),
-      diaryTitle: DiaryTitle('Enter your title here'),
-      diaryBody: DiaryBody('And so how\'s your day been?'),
+      diaryTitle: DiaryTitle(title),
+      diaryBody: DiaryBody(body),
     );
   }
 }

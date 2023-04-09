@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:project_happynewyear/application/user_dashboard/user_dashboard_bloc.dart';
-import 'package:project_happynewyear/presentation/diary/widgets/diary_entry_tile.dart';
-import 'package:project_happynewyear/presentation/user_dashboard/user_dashboard.dart';
 
 import '../core/constants.dart';
+import 'widgets/diary_entry_tile.dart';
+import '../../application/user_dashboard/user_dashboard_bloc.dart';
+import '../../application/diary/diary_watcher/diary_watcher_bloc.dart';
 
 class DiaryHome extends StatelessWidget {
   const DiaryHome({super.key});
@@ -51,17 +51,26 @@ class DiaryHome extends StatelessWidget {
           ),
           Expanded(
             flex: 5,
-            child: ListView(
-              children: const [
-                DiaryEntryTile(),
-                DiaryEntryTile(),
-                DiaryEntryTile(),
-                DiaryEntryTile(),
-                DiaryEntryTile(),
-                DiaryEntryTile(),
-                DiaryEntryTile(),
-                DiaryEntryTile(),
-              ],
+            child: BlocBuilder<DiaryWatcherBloc, DiaryWatcherState>(
+              builder: (context, state) {
+                if (state is FetchSuccess) {
+                  return ListView(
+                    children: state.allEntriesList
+                        .map(
+                          (diaryEntry) => DiaryEntryTile(
+                            diaryEntry: diaryEntry,
+                          ),
+                        )
+                        .toList(),
+                  );
+                } else if (state is FetchFailure) {
+                  return Text(
+                    state.diaryFailure.toString(),
+                  );
+                } else {
+                  return const CircularProgressIndicator();
+                }
+              },
             ),
           ),
         ],

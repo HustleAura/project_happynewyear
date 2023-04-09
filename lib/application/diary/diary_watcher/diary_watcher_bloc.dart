@@ -15,7 +15,7 @@ part 'diary_watcher_bloc.freezed.dart';
 class DiaryWatcherBloc extends Bloc<DiaryWatcherEvent, DiaryWatcherState> {
   final IDiaryRepository diaryRepository;
 
-  DiaryWatcherBloc(this.diaryRepository) : super(const _Initial()) {
+  DiaryWatcherBloc(this.diaryRepository) : super(const Loading()) {
     diaryRepository.readEntries().listen(
       (diaryEntryEither) {
         add(
@@ -29,8 +29,8 @@ class DiaryWatcherBloc extends Bloc<DiaryWatcherEvent, DiaryWatcherState> {
         showAllEntries: (event) {
           emit(
             event.diaryEntryEither.fold(
-              (dairyFailure) => _FetchFailure(dairyFailure),
-              (allEntriesList) => _FetchSuccess(allEntriesList),
+              (dairyFailure) => FetchFailure(dairyFailure),
+              (allEntriesList) => FetchSuccess(allEntriesList),
             ),
           );
         },

@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/services.dart';
+import 'package:injectable/injectable.dart';
 import 'package:project_happynewyear/infrastructure/core/firestore_helpers.dart';
 
 import '../../domain/diary_entry/diary_entry/diary_entry.dart';
@@ -8,6 +9,7 @@ import '../../domain/diary_entry/diary_failure.dart';
 import '../../domain/diary_entry/i_diary_repository.dart';
 import '../core/data_transfer_objects.dart';
 
+@LazySingleton(as: IDiaryRepository)
 class DiaryRepository implements IDiaryRepository {
   final FirebaseFirestore _firebaseFirestore;
 

@@ -5,9 +5,15 @@ import '../../core/constants.dart';
 import 'diary_field_decoration.dart';
 
 class TitleField extends StatelessWidget {
-  const TitleField({
+  final TextEditingController controller;
+  TitleField({
     super.key,
+    required this.controller,
   });
+
+  String getValue() {
+    return controller.text;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +41,7 @@ class TitleField extends StatelessWidget {
             ),
           ),
           style: GoogleFonts.poppins(),
+          controller: controller,
         ),
       ),
     );

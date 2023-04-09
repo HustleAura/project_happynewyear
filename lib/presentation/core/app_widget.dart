@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_happynewyear/application/auth/auth_ui/auth_ui_bloc.dart';
+import 'package:project_happynewyear/application/diary/diary_ui_bloc/diary_ui_bloc.dart';
+import 'package:project_happynewyear/application/diary/diary_watcher/diary_watcher_bloc.dart';
 import 'package:project_happynewyear/application/user_dashboard/user_dashboard_bloc.dart';
-import 'package:project_happynewyear/presentation/core/constants.dart';
 import 'package:project_happynewyear/presentation/core/routes/router.dart';
 import 'package:project_happynewyear/presentation/core/splash_page.dart';
 
@@ -34,6 +35,16 @@ class AppWidget extends StatelessWidget {
         BlocProvider(
           create: (_) {
             return getIt<UserDashboardBloc>();
+          },
+        ),
+        BlocProvider(
+          create: (_) {
+            return getIt<DiaryWatcherBloc>();
+          },
+        ),
+        BlocProvider(
+          create: (_) {
+            return getIt<DiaryUiBloc>();
           },
         ),
       ],

@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project_happynewyear/presentation/core/constants.dart';
-import 'package:project_happynewyear/presentation/new_entry/widgets/body_field.dart';
-import 'package:project_happynewyear/presentation/new_entry/widgets/date_field.dart';
-import 'package:project_happynewyear/presentation/new_entry/widgets/title_field.dart';
-import 'package:project_happynewyear/presentation/new_entry/widgets/finish_button.dart';
+import 'package:project_happynewyear/application/diary/diary_ui_bloc/diary_ui_bloc.dart';
+import 'package:project_happynewyear/domain/diary_entry/diary_entry/diary_entry.dart';
+
+import '../core/constants.dart';
+import 'widgets/body_field.dart';
+import 'widgets/title_field.dart';
 
 class NewEntryPage extends StatelessWidget {
-  const NewEntryPage({super.key});
+  final titleController = TextEditingController();
+  final bodyController = TextEditingController();
+  NewEntryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,18 +27,29 @@ class NewEntryPage extends StatelessWidget {
                 flex: 4,
                 child: Image.asset(newEntryScreenLogoPath),
               ),
-              const Expanded(
+              Expanded(
                 flex: 1,
-                child: TitleField(),
+                child: TitleField(
+                  controller: titleController,
+                ),
               ),
-              const Expanded(
+              Expanded(
                 flex: 7,
-                child: BodyField(),
+                child: BodyField(
+                  controller: bodyController,
+                ),
               ),
               Expanded(
                 flex: 1,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    BlocProvider.of<DiaryUiBloc>(context).add(
+                      DiaryUiEvent.createEntry(DiaryEntry.newEntry(
+                        titleController.text,
+                        bodyController.text,
+                      )),
+                    );
+                  },
                   child: Text(
                     'done!',
                     style: GoogleFonts.poppins(
