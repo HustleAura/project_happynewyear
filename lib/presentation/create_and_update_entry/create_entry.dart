@@ -51,6 +51,8 @@ class NewEntryPage extends StatelessWidget {
                         ),
                       ),
                     );
+
+                    Navigator.pop(context);
                   },
                   child: Text(
                     'done!',

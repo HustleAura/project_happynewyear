@@ -18,7 +18,12 @@ class DiaryRepository implements IDiaryRepository {
   @override
   Stream<Either<DiaryFailure, List<DiaryEntry>>> readEntries() async* {
     try {
-      yield* _firebaseFirestore.userDocument().noteCollection.snapshots().map(
+      yield* _firebaseFirestore
+          .userDocument()
+          .noteCollection
+          .orderBy('date')
+          .snapshots()
+          .map(
             (QuerySnapshot snapshot) => right(
               snapshot.docs
                   .map(

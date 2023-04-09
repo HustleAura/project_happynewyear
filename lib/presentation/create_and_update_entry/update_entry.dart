@@ -50,28 +50,57 @@ class UpdateEntryPage extends StatelessWidget {
               ),
               Expanded(
                 flex: 1,
-                child: TextButton(
-                  onPressed: () {
-                    BlocProvider.of<DiaryUiBloc>(context).add(
-                      DiaryUiEvent.updateEntry(
-                        DiaryEntry.updatedDiaryEntry(
-                          body: bodyController.text,
-                          diaryEntry: diaryEntry,
-                          title: titleController.text,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        BlocProvider.of<DiaryUiBloc>(context).add(
+                          DiaryUiEvent.updateEntry(
+                            DiaryEntry.updatedDiaryEntry(
+                              body: bodyController.text,
+                              diaryEntry: diaryEntry,
+                              title: titleController.text,
+                            ),
+                          ),
+                        );
+
+                        Navigator.pop(context);
+                      },
+                      child: Text(
+                        'Update!',
+                        style: GoogleFonts.poppins(
+                          color: foreGroundColor,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                    );
-
-                    Navigator.pop(context);
-                  },
-                  child: Text(
-                    'Update!',
-                    style: GoogleFonts.poppins(
-                      color: foreGroundColor,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
                     ),
-                  ),
+                    TextButton(
+                      onPressed: () {
+                        BlocProvider.of<DiaryUiBloc>(context).add(
+                          DiaryUiEvent.deleteEntry(
+                            DiaryEntry.updatedDiaryEntry(
+                              body: bodyController.text,
+                              diaryEntry: diaryEntry,
+                              title: titleController.text,
+                            ),
+                          ),
+                        );
+
+                        Navigator.pop(context);
+                      },
+                      child: Text(
+                        'Delete!',
+                        style: GoogleFonts.poppins(
+                          color: foreGroundColor,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
